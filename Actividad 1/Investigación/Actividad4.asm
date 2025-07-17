@@ -6,3 +6,10 @@ M=D
 D=A
 @16
 M=D+M
+//Guardar un 100 en RAM[32]
+@100
+D=A
+@32
+M=D
+
+//M ES LO QUE CONTIENE LA RAM A LO QUE ESTA APUNTANDO A

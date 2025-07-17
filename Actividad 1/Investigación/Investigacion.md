@@ -19,7 +19,6 @@ Es una serie de ordenes que se ejecutan de forma secuencial que estan escritas e
 
 
 
-
 ¿Qué es lenguaje de máquina?
 
 
