@@ -32,3 +32,5 @@ A: Registro a las direcciones de memoria para ejecutar el siguiente comando
 D: Un registro de datos que los almacena temporalmente
 
 ¿Para qué los usa la CPU?
+
+prueba de repo
