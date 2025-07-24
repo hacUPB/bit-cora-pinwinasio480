@@ -11,6 +11,8 @@ D;JEQ
 @KEYBOARD
 0;JMP
 
+(DRAW)
+
 // 18. Utiliza esta herramienta para dibujar un bitmap en la pantalla.
 
     // put bitmap location value in R12
@@ -393,7 +395,6 @@ D;JEQ
 	A=D-A // A=addr + val - val = addr
 	M=D-A // RAM[addr] = val
 	// return
-	@R13
 	A=M
 	D;JMP
 
