@@ -6,18 +6,18 @@
     @0
     D=D+M
     @1
-M   =D
+    M=D
 
 // 11. Considera el siguiente programa:
     
-    i = 1000
-    LOOP:
-    if (i == 0) goto CONT
-    i = i - 1
-    goto LOOP
-    CONT:
+    //i = 1000
+    //LOOP:
+    //if (i == 0) goto CONT
+    //i = i - 1
+    //goto LOOP
+    //CONT:
     
-    La traducción a lenguaje ensamblador del programa anterior es:
+//La traducción a lenguaje ensamblador del programa anterior es:
     
     // i = 1000
     @1000
@@ -51,7 +51,7 @@ M   =D
     //- ¿En qué memoria y en qué dirección de memoria está almacenado el comentario //`i = 1000?`
 
     // Los comentarios no se guardan en ninguna parte, solo son visibles para el usuario desde su bitacora o codigo,
-    pero para el ensamblador es imposible detectar un comentario. Solo se guarda como instrucción @1000.
+    //pero para el ensamblador es imposible detectar un comentario. Solo se guarda como instrucción @1000.
 
     //- ¿Cuál es la primera instrucción del programa anterior? ¿En qué memoria y en qué dirección de memoria está almacenada esa instrucción?
 

@@ -1,16 +1,3 @@
-//20. Implementa un programa en lenguaje ensamblador que dibuje el bitmap que diseñaste en la pantalla 
-//solo si se presiona la tecla “d”.
-
-(KEYBOARD)
-@KBD
-D=M
-@100
-D=D-A
-@draw
-D;JEQ
-@KEYBOARD
-0;JMP
-
 // 18. Utiliza esta herramienta para dibujar un bitmap en la pantalla.
 
     // put bitmap location value in R12
@@ -396,7 +383,3 @@ D;JEQ
 	@R13
 	A=M
 	D;JMP
-
-(END)
-    @END
-    0;JMP

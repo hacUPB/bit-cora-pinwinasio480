@@ -2,7 +2,7 @@
 //En la posición R0 está almacenada la dirección inicial de una región de memoria. En la posición R1 está almacenado el tamaño de la región de memoria. 
 //Almacena un -1 en esa región de memoria.
 
-//@R2
+  @R2
   M=0
 
   (LOOP)

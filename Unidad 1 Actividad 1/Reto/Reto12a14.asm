@@ -1,13 +1,12 @@
 //12. Implemente en ensamblador:
-R4 = R1 + R2 + 69
-
-//@20
-  D=A
-  @R1
-  M=D
-  @15
-  D=A
-  @R2
+//R4 = R1 + R2 + 69
+  @20
+  D=A 
+  @R1 
+  M=D 
+  @32 
+  D=A 
+  @R2 
   M=D
   @R1
   D=M 
@@ -19,13 +18,13 @@ R4 = R1 + R2 + 69
   M=D
 
 //13. Implementa en ensamblador:
-if R0 >= 0 then R1 = 1
-else R1 = –1
+//if R0 >= 0 then R1 = 1
+//else R1 = –1
 
-(LOOP)
-goto LOOP
+//(LOOP)
+//goto LOOP
 
- //@R0
+   @R0
    D=M
    @NEG
    D;JLT
@@ -45,9 +44,9 @@ goto LOOP
    0;JMP
 
 //14. Implementa en ensamblador:
-R4 = RAM[R1]
+//R4 = RAM[R1]
 
-//@20
+  @20
   D=A
   @R1
   M=D 
