@@ -13,8 +13,6 @@ D;JEQ
 
 (DRAW)
 
-// 18. Utiliza esta herramienta para dibujar un bitmap en la pantalla.
-
     // put bitmap location value in R12
 	// put code return address in R13
 	@SCREEN
