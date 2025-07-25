@@ -12,7 +12,7 @@ Retos 8-9:
 
 Retos 10-11:
 
-Retos 12-14:
+Retos 12-14: En estos tres retos logre aprender cosas diferentes. Desde sumar dos valores almacenados en dos posiciones de la memoria RAM y sumarlo con una constante, teniendo su resultado en una posición diferente a las dos sumadas (sumar registros con una constante); así como ver de mejor forma el uso de etiquetas (en este caso, una de ella es NEG, la cual sirve para marcar posición) en donde si el valor en el registro D es < 0, se activaría el condicional D;JLT (Jump if Lower Than), saltara hacia la posición de NEG, en donde se almacenara -1 en [R1], pero si pasa lo contrario (es decir, el valor de D > 0), R1 cargara 1 a esa memoria; y por ultimo, también pude apreciar como una posición de la memoria RAM [R4] por ejemplo, puede leer y obtener el contenido de otra posición (en este caso, R4 almaceno el contenido de la dirección apuntada por R1).
 
 Reto 15:
 
@@ -22,7 +22,7 @@ Reto 17:
 
 Reto 18: Este reto me dio la posibilidad de comprender la manipulación directa del Jack bitmap editor para dibujar un bitmap. Además de aprender a que incluso un dibujo desde un programa así, con la opción Hack Assembly activa, este traducirá todo el dibujo que haya hecho en lenguaje ensamblador, y al reproducir todo el código del dibujo desde CPU EMULATOR (.asm), en la pantalla se mostrara como el programa hará el dibujo que hice en cuestión de segundos.
 
-Reto 19:
+Reto 19: Este reto me permitió observar cómo el lenguaje binario se puede traducir a ensamblador, y como dependiendo de como lo implementes, es decir, si cargas un archivo .hack, si escribes linea por línea primero en binario o incluso dependiendo de la inteligencia artificial a la que le preguntes, algunas líneas tendrán varias interpretaciones (esto lo digo en base a lo que me sucedió en este decimo noveno reto).
 
 Reto 20: Este último se me hizo interesante, ¿en que sentido?, en que en este, también use el código del reto 18 para su funcionamiento, así mismo, he destacar que me ha ayudado a como hacer que el programa detecte entradas especificas del teclado, como en este reto, en donde el lienzo de bitmap no se dibujaba hasta que se oprimiera la tecla 'd' (y también aprendí mejor a ver lo valores de algunas teclas, la de la letra 'h' aun no sale de mi cabeza, es 104 si mal no recuerdo).
 
