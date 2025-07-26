@@ -2,6 +2,18 @@
 //En la posición R0 está almacenada la dirección inicial de una región de memoria. En la posición R1 está almacenado el tamaño de la región de memoria. 
 //Almacena un -1 en esa región de memoria.
 
+// R0 = 100 (inicio de región)
+@100
+D=A
+@R0
+M=D
+
+// R1 = 5 (tamaño de la región)
+@5
+D=A
+@R1
+M=D
+
 @R2
 M=0
 
