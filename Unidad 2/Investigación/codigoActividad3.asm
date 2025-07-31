@@ -1,18 +1,22 @@
 (LOOP)
-      @KBD   //KBD = 24576
-      D=M
-      @100
-      D=D-A 
-      @DRAW 
-      D;JEQ
-      @0
-      D=D-A 
-      @CLEAR
-      D;JEQ
-      @LOOP
-      0;JMP
+    @KBD
+    D=M
+    @100
+    D=D-A
+    @DRAW
+    D;JEQ        // Si KBD == 100, salta a DRAW
 
-(DRAW)
+    @KBD
+    D=M
+    @0
+    D=D-A
+    @CLEAR
+    D;JEQ        // Si KBD == 0, salta a CLEAR
+
+    @LOOP
+    0;JMP  
+
+(DRAW) 
 
 	@SCREEN
 	D=A
@@ -397,14 +401,14 @@
 	D;JMP
 
     (CLEAR)
-// R0 = 100 (inicio de región)
-@3
+    @SCREEN
+    M=0
+@16384
 D=A
 @R0
 M=D
 
-// R1 = 5 (tamaño de la región)
-@32751
+@8192
 D=A
 @R1
 M=D
@@ -412,7 +416,7 @@ M=D
 @R2
 M=0
 
-(LOOP)
+(CLEAR_LOOP)
 @R2
 D=M
 @R1
@@ -429,7 +433,7 @@ M=0
 @R2
 M=0
 
-@LOOP
+@CLEAR_LOOP
 0;JMP
 
 (END)

@@ -30,6 +30,20 @@ Vas a implementar y simular una modificación al reto 20 de la unidad anterior. 
 
 Si quiero que se borre al no presionar ninguna tecla, debo hacer que los registros llenados con algun número por el mismo dibujo, sean cambiados por 0 para asi que las lineas del registro desaparezcan.
 
+
+
+
+
+
+
+
+
 ### Actividad 4
 
 Ahora realizarás una nueva variación al programa de la actividad anterior. Si se presiona la letra “d” muestras la imagen que diseñaste en el reto 18. Solo si se presiona la letra “e” borrarás la imagen que se muestra en pantalla.
+
+Debo modificar el loop de eliminar para que sea similar al de 0.
+
+En codigoActividad3.asm el error que tengo aparece debido a que tengo una instrucción ASM
+
+si D == 100, E == 101, la correcio
