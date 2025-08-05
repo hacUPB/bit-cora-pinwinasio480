@@ -52,10 +52,10 @@ M=1
 M=0 
 
 (LOOP)
-// Si i <= 100, (no en 100 porque sino seria igual a 100 secas) termina el ciclo
+// Si i >= 101, termina el ciclo de lo contrario, seria un bucle infinito
 @i
 D=M       //El registro D almacena el valor de i (1) 
-@100      //<= 100
+@101      //<= 100
 D=D-A     //Se usa como comparativo ya que no hay comparativos aparte de las funcionas de salto
 @END      //Etiqueta para finalizar el bucle
 D;JGE     //Jump if Greather or Equal
@@ -78,6 +78,39 @@ M=M+1
 0;JMP         // Loop infinito para detener el programa
 
 //Intento 2 no se traba en el bucle, pero se esta duplicando los valores de sum, se detiene en 101
+//durante el intento 2, si bien suma 1 en 1 en la variable i, en la variable sum se esta duplicando
+//es decir, si esta acumulando los valores de las sumas
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     
 //    - ¿Cómo están implementadas las variables `i` y `sum`?
