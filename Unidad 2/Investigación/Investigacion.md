@@ -31,12 +31,7 @@ Vas a implementar y simular una modificación al reto 20 de la unidad anterior. 
 Si quiero que se borre al no presionar ninguna tecla, debo hacer que los registros llenados con algun número por el mismo dibujo, sean cambiados por 0 para asi que las lineas del registro desaparezcan.
 
 
-
-
-
-
-
-
+Hasta ahora no me deja borrar el dibujo completo, solo unas cuantas lineas, pero nada
 
 ### Actividad 4
 
