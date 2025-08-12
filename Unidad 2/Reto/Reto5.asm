@@ -8,8 +8,11 @@
 
 // int a = 10
 
-@a
-M=10
+@10
+D=A 
+@a 
+M=D 
+
 
 // p = &a (Almacena la dirección de la variable)
 
@@ -20,6 +23,8 @@ M=D
 
 // *p = 20 (Se declara el puntero)
 
-@p
-A=M
-M=20
+@20 
+D=A 
+@p 
+A=M 
+M=D
