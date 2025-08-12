@@ -14,7 +14,7 @@ el contenido de la variable apuntada.
 Lo que estoy entendiendo, es que debo declarar en la variable `var` un 10, y en `bis` un 5. 
 Despues declaro un puntero en `p_var` el cual incializo en la dirección var,
 posterior a eso asigno a la variable `bis` el valor apuntado por `p_var`.
-Lo cual implica que el valor de `bis` cambia de 5 a 10
+Lo cual implica que el valor de `bis` cambia de 5 a 10.
 
 Aclaro que esto lo escribo en base a lo que entiendo del codigo, ya que como tal
 no tengo claro si era hacer esto u otra cosa, eso si, se que el punto 7 es pasar este mismo codigo

@@ -33,12 +33,19 @@ Reto 6
 
 Es de los retos que más me costo porque exactamente no recordaba que habia que hacer, en mi respuesta solo puse la explicación de como interprete ese codigo. Lo pongo nuevamente aqui por si algo.
 
+Lo que estoy entendiendo, es que debo declarar en la variable `var` un 10, y en `bis` un 5. 
+Despues declaro un puntero en `p_var` el cual incializo en la dirección var,
+posterior a eso asigno a la variable `bis` el valor apuntado por `p_var`.
+Lo cual implica que el valor de `bis` cambia de 5 a 10.
+
 Reto 7
 
-
+Al pasarlo a ensamblador aunque hubo cosas nuevas, tuve de base algunas partes que habia hecho en el reto 5 para realizar el programa de este.
 
 Reto 8
 
-
+Este reto es más que todo una prueba para recordar que hace cada cosa del concepto de puntero y almacenamiento de variables, ojo, puede que la forma en la que lo este diciendo ahora mismo sea erronea, ironicamente, ese ejercicio es de memoria y yo aqui lo que estoy escribiendo es intentando recordar con memoria.
 
 Reto 9
+
+Este fue por mucho el más complicado, más que todo porque hay cosas del enunciado que interpretaba de formas opuestas o distintas. Porque si, almacenar variables en a y b y hacer una suma hasta ahi va todo bien, el retorno normal, pero ya cuando hay un main de por medio, o cosas como "std::cout << "El valor de c es: " << c << std::endl;" son cosas que dejan rascando la cabeza por muy buen rato.

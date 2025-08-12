@@ -42,4 +42,7 @@ Debo modificar el loop de eliminar para que sea similar al de 0.
 
 En codigoActividad3.asm el error que tengo aparece debido a que tengo una instrucción ASM
 
-si D == 100, E == 101, la correcio
+si D == 100, E == 101.
+
+Revisar codigoActividad4.asm, como tal solo era cambiar la condición, que en lugar que mande a clear
+teniendo 0, debe tener 101 (el valor de la tecla 'e').
