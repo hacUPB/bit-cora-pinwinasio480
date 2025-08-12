@@ -10,19 +10,17 @@ Es la localización de la memoria de 16 bits para representar el teclado, estand
 
 Cuando la tecla es presionada, aparecera la cantidad de esta.
 
-¿como accedo a la ram?
-
 - Inventa un programa que haga uso de la entrada-salida mapeada a memoria.
 
-
+Revisar archivo codigoActividad1_3.asm
 
 - Investiga el funcionamiento del programa con el simulador.
-
-
 
 ### Actividad 2
 
 Vas a revisar de nuevo el reto 20 de la unidad anterior. Asegúrate de entenderlo, simularlo y experimentar con él antes de continuar con el siguiente reto.
+
+// Ya lo probe en el reto 18 de la anterior unidad y sigue funcionando como si nada.
 
 ### Actividad 3
 
@@ -31,7 +29,10 @@ Vas a implementar y simular una modificación al reto 20 de la unidad anterior. 
 Si quiero que se borre al no presionar ninguna tecla, debo hacer que los registros llenados con algun número por el mismo dibujo, sean cambiados por 0 para asi que las lineas del registro desaparezcan.
 
 
-Hasta ahora no me deja borrar el dibujo completo, solo unas cuantas lineas, pero nada
+Hasta ahora no me deja borrar el dibujo completo, solo unas cuantas lineas, pero nada.
+
+Revisar codigoActividad3.asm, ya logre que el codigo diera para borrar, aunque se me paso dejar la 
+versión original.
 
 ### Actividad 4
 

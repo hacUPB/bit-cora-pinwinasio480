@@ -83,7 +83,7 @@ M=M+1
 @FOR_LOOP
 0;JMP
 
-(END)
 // Fin para acabar el programa
+(END)
 @END 
 0;JMP

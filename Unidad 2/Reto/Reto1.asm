@@ -77,41 +77,47 @@ M=M+1
 @END
 0;JMP         // Loop infinito para detener el programa
 
-//Intento 2 no se traba en el bucle, pero se esta duplicando los valores de sum, se detiene en 101
-//durante el intento 2, si bien suma 1 en 1 en la variable i, en la variable sum se esta duplicando
-//es decir, si esta acumulando los valores de las sumas
+//Intento 2 no se traba en el bucle.
+
+//PREGUNTAS
 
 //- ¿Cómo están implementadas las variables `i` y `sum`?
 
-
+//Ambas se almacenan en direcciones de la memoria RAM [R16] y [R17]. 
 
 //- ¿En qué direcciones de memoria están estas variables?
 
-
+//i esta en [R16], mientras que sum esta en [R17] hablando de la memoria RAM.
 
 //- ¿Cómo está implementado el ciclo `while`?
 
-
+//Se implementa con un LOOP para que haga un bucle donde si i <= 100, 
+//se repetira el bucle para que siga sumando
+//pero si i es >= 101, el bucle acabara.
 
 //- ¿Cómo se implementa la variable `i`?
 
-
+//Se almacena en una dirección de la RAM como dije antes, su valor se lee con el registro D.
 
 //- ¿En qué parte de la memoria se almacena la variable `i`?
 
-
+//A juzgar por el enunciado, dire que esta almacenado en la memoria RAM, como dije antes,
+//en [R16].
 
 //- Después de todo lo que has hecho, ¿Qué es entonces una variable?
 
-
+//Es una forma de almacenar valores (o algo contenido) en una dirección de forma más eficaz
+//odria decirse que son como etiquetas especiales pero para contener datos.
 
 //- ¿Qué es la dirección de una variable?
 
-
+//Es en donde esta ubicado la variable dentro de la memoria RAM, la cual incia desde la dirección 16
+//[R16] en adelante, excepto en la última, ya que es la del teclado si mal no recuerdo.
 
 //- ¿Qué es el contenido de una variable?
 
-
+//Es el valor que se contiene o asigna en una variable, es como aqui, donde yo pongo en el contenido de i 1,
+//o en el de sum 0.
 
 
 

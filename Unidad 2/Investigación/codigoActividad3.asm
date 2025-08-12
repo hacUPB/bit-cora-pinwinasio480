@@ -408,30 +408,30 @@ D=A
 @R0
 M=D
 
-@8192
+@1600
 D=A
 @R1
 M=D
 
 @R2
-M=0
+M=M+1
 
 (CLEAR_LOOP)
-@R2
-D=M
-@R1
-D=D-M
-@END
-D;JEQ
+    @R1
+    M=M-1
+    @END_CLEAR
+    D;JEQ          // Si contador llega a 0, termina
 
-@R0
-D=M
-@R2
-A=D+M
-M=0
+    @R0
+    A=M
+    M=0            // Limpia la posición actual
 
-@R2
-M=0
+    @R0
+    M=M+1          // Avanza el puntero (a la siguiente posición)
+
+    @CLEAR_LOOP
+    0;JMP
+
 
 @CLEAR_LOOP
 0;JMP

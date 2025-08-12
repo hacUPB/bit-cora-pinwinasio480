@@ -11,13 +11,11 @@ En este caso bis = *p_var; hace que el valor de bis cambie de 5 a 10
 porque p_var apunta a la la variable var y con *p_var a la derecha del igual estás leyendo 
 el contenido de la variable apuntada.
 
-En este ejercicio se utiliza un puntero para acceder indirectamente al valor de una variable.
-Primero se declara una variable `var` con valor 10, y otra llamada `bis` con valor 5.
-Luego se declara un puntero `p_var`, que se inicializa con la dirección de `var`.
-Finalmente, se asigna a `bis` el valor apuntado por `p_var`, es decir, el contenido de `var`.
+Lo que estoy entendiendo, es que debo declarar en la variable `var` un 10, y en `bis` un 5. 
+Despues declaro un puntero en `p_var` el cual incializo en la dirección var,
+posterior a eso asigno a la variable `bis` el valor apuntado por `p_var`.
+Lo cual implica que el valor de `bis` cambia de 5 a 10
 
-Esto significa que `bis = *p_var;` cambia el valor de `bis` de 5 a 10,
-porque `p_var` apunta a `var`, y al usar `*p_var` estamos accediendo al contenido de esa dirección.
-
-En resumen, se está leyendo el valor de `var` a través del puntero `p_var`
-y copiándolo en la variable `bis`.
+Aclaro que esto lo escribo en base a lo que entiendo del codigo, ya que como tal
+no tengo claro si era hacer esto u otra cosa, eso si, se que el punto 7 es pasar este mismo codigo
+a ensamblador.
