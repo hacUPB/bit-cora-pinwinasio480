@@ -6,4 +6,5 @@
 //    sum += i;
 //}
 
-//Ahora en vez de ser con una condición (<=100) debe ser con número fijo de un rango
+//Ahora en vez de evaluarse i <= 100, el programa debe ejecutar un número determinado de veces.
+

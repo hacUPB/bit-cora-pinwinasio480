@@ -41,7 +41,7 @@
 //@END
 //0;JMP         // Loop infinito o punto final del programa
 
-//INTENTO 2
+//INTENTO 2 (EL QUE FUNCIONA)
 
 // i = 1
 @i 
@@ -81,7 +81,35 @@ M=M+1
 //durante el intento 2, si bien suma 1 en 1 en la variable i, en la variable sum se esta duplicando
 //es decir, si esta acumulando los valores de las sumas
 
+//- ¿Cómo están implementadas las variables `i` y `sum`?
 
+
+
+//- ¿En qué direcciones de memoria están estas variables?
+
+
+
+//- ¿Cómo está implementado el ciclo `while`?
+
+
+
+//- ¿Cómo se implementa la variable `i`?
+
+
+
+//- ¿En qué parte de la memoria se almacena la variable `i`?
+
+
+
+//- Después de todo lo que has hecho, ¿Qué es entonces una variable?
+
+
+
+//- ¿Qué es la dirección de una variable?
+
+
+
+//- ¿Qué es el contenido de una variable?
 
 
 
