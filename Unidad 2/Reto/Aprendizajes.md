@@ -10,8 +10,6 @@ Reto 1
 Con el reto 1 lo que pude evidenciar, es como se pueden usar dos variables al mismo tiempo de formas diferentes en un while, al final en la variable i se almaceno la cantidad de veces sumados, 
 mientras que en la variable sum se fue acumulando las sumas en total.
 
-<video controls src="GrabaciónReto1-1.mkv" title="Title"></video>
-
 Reto 2
 
 De este no tengo mucho que decir, fue más como un recordatorio de como se aplica un for, 
