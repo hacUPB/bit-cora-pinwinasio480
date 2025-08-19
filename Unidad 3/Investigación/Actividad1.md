@@ -35,3 +35,5 @@ void ofApp::draw(){
 ```
 
 - ¿Cuál es el resultado que se obtiene al ejecutar este programa?
+
+Al ejecutar el programa, se obtiene una pantalla negra en el se dibuja un circulo blanco cuyo movimiento es equivalente al del mouse, es decir, este se mueve en la misma dirección y posición que el mouse.

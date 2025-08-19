@@ -2,7 +2,7 @@
 
 En la unidad anterior introdujimos el concepto de puntero. Ahora vamos a profundizar en este concepto de manera práctica.
 
-El siguiente ejemplo se supone (en la actividad que sigue vas a corregir un error) que te permite seleccionar una espera y moverla con el mouse.
+El siguiente ejemplo se supone (en la actividad que sigue vas a corregir un error) que te permite seleccionar una esfera y moverla con el mouse.
 
 Modifica el archivo `ofApp.h` de la siguiente manera:
 
