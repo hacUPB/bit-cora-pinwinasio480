@@ -1,5 +1,7 @@
 ### Actividad 2
 
+//TERMINADA POR AHORA
+
 De nuevo una actividad grupal en la cual escribiremos juntos nuestra primera aplicación y analizaremos las diferentes partes que la componen.
 Genera un proyecto con el generador de proyectos de openframeworks.
 Abre el proyecto en Visual Studio.
