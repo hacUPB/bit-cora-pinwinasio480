@@ -1,5 +1,7 @@
 ### Actividad 5
 
+//EN PROCESO
+
 En la unidad anterior introdujimos el concepto de puntero. Ahora vamos a profundizar en este concepto de manera práctica.
 
 El siguiente ejemplo se supone (en la actividad que sigue vas a corregir un error) que te permite seleccionar una esfera y moverla con el mouse.
@@ -122,7 +124,25 @@ void ofApp::mousePressed(int x, int y, int button){
 }
 ​
 ¿Cuál es la definición de un puntero?
+
+
+
 ¿Dónde está el puntero?
+
+Esta ubicado en Sphere.
+
 ¿Cómo se inicializa el puntero?
+
+    vector<Sphere*> spheres;
+    Sphere* selectedSphere;
+
 ¿Para qué se está usando el puntero?
+
+
+
 ¿Qué es exactamente lo que está almacenado en el puntero?
+
+
+
+
+//Genera 5 esferas aleatorias de diferentes tamaños, solo me deja cojer 2 o 1 si en la primera hago más de una vez click.

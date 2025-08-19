@@ -1,5 +1,7 @@
 ### Actividad 4
 
+//PENDIENTE CHECAR VIDEOS
+
 Esta actividad la puedes realizar en tu tiempo de trabajo independiente de la semana de investigación. Invierte el espacio completo de una hora y 40 minutos, pero si realmente piensas que quieres explorar más sobre programación en C++, entonces invierte más tiempo.
 
 Ten presente que este recurso que te propongo se ajusta a la metodología que estamos siguiendo, que es aprender a aprender mediante la investigación y la experimentación. Notarás entonces que en los videos hay muchos experimentos que podrás reproducir y analizar, pero ten presente que el autor usa Linux y tú usarás, normalmente, Windows.
