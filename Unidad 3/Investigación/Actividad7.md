@@ -1,5 +1,7 @@
 ### Actividad 7
 
+//TERMINADO POR AHORA
+
 Ahora te voy a proponer que reflexiones profundamente sobre el manejo de la memoria en un programa. Se trata de un experimento en el que tienes que analizar por qué está funcionando mal.
 Modifica el archivo ofApp.h de la siguiente manera:
 #pragma once
@@ -30,6 +32,7 @@ private:
 };
 
 Y el archivo ofApp.cpp así:
+
 #include "ofApp.h"
 
 Sphere::Sphere(float x, float y, float radius) : x(x), y(y), radius(radius) {
@@ -85,6 +88,9 @@ void ofApp::createObjectInStack() {
 }
 ​
 ¿Qué sucede cuando presionas la tecla “c”?
+
+Cuando se oprime la tecla "c" me aparece un texto en el que se menciona que un objeto fue creado en una posición, pero no me aparece ningun objeto en pantalla.
+
 Realiza esta modificación a la función createObjectInStack donde claramente se está creando un objeto, pero se está creando en el heap y no en el stack, así que no te dejes confundir por el nombre de la función.
 void ofApp::createObjectInStack() {
     // Sphere localSphere(ofRandomWidth(), ofRandomHeight(), 30);
@@ -99,4 +105,8 @@ void ofApp::createObjectInStack() {
 ​
 ¿Qué sucede cuando presionas la tecla “c”?
 
+Ahora, al oprimir la tecla "c", ahora me genera una esfera con un color y posición aleatoria, cabe aclarar que solo es posible generar una esfera cada vez que se inicie el programa
+
 ¿Por qué ocurre esto?
+
+Porque se esta incializando con un puntero la variable Sphere para que modifique la dirección de memoria de newSphere, además de que Sphere ya no maneja variable en stack, sino en heap, lo que implica que la ubicación de la esfera ya no esta almacenada localmente, sino el heap del programa.

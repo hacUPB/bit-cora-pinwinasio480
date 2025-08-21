@@ -1,6 +1,6 @@
 ### Actividad 5
 
-//EN PROCESO
+//TERMINADO POR AHORA
 
 En la unidad anterior introdujimos el concepto de puntero. Ahora vamos a profundizar en este concepto de manera práctica.
 
@@ -125,24 +125,27 @@ void ofApp::mousePressed(int x, int y, int button){
 ​
 ¿Cuál es la definición de un puntero?
 
-
+Un puntero en C++ se refiere a una variable encargada de almacenar la dirección de memoria otra variable, siendo util para acceder y manipular el valor almacenado en esa dirección.
 
 ¿Dónde está el puntero?
 
-Esta ubicado en Sphere.
+El puntero se encuentra ubicado en la clase ofApp.h, estando declarada asi:
+
+vector<Sphere*> spheres;
+Sphere* selectedSphere;
 
 ¿Cómo se inicializa el puntero?
 
-    vector<Sphere*> spheres;
-    Sphere* selectedSphere;
+Al ya tener la declaración de los punteros como se ve en la pregunta anterior, en un metodo setup(), el puntero se inicializa con nullptr
+
+selectedSphere = nullptr
 
 ¿Para qué se está usando el puntero?
 
-
+En el caso de este ejercicio, el puntero se esta utilizando para apuntar a la esfera selecccionada, de manera en que el esa esfera pueda ser movida con el mouse. Mientras que el vector almacena punteros a todas las esferas creadas.
 
 ¿Qué es exactamente lo que está almacenado en el puntero?
 
+Esta almacenando la dirección de memoria de un objeto Sphere, es decir, no almacena la esfera, sino una referencia a donde esta siendo guardada.
 
 
-
-//Genera 5 esferas aleatorias de diferentes tamaños, solo me deja cojer 2 o 1 si en la primera hago más de una vez click.
