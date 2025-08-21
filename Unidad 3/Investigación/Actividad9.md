@@ -55,6 +55,9 @@ void ofApp::mousePressed(int x, int y, int button){
 ```
 
 - ¿Qué sucede cuando presionas la tecla “f”?
+
+Cuando oprimo la tecla "f", los circulos que haya creado al oprimir click izquierdo, se borraran uno por uno en el orden en que se hayan creado.
+
 - Analiza detalladamente esta parte del código:
 
 if(!heapObjects.empty()) {
