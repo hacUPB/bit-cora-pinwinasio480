@@ -60,6 +60,7 @@ Cuando oprimo la tecla "f", los circulos que haya creado al oprimir click izquie
 
 - Analiza detalladamente esta parte del código:
 
+
 if(!heapObjects.empty()) {
     delete heapObjects.back();
     heapObjects.pop_back();
