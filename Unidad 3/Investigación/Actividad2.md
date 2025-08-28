@@ -1,11 +1,12 @@
 ### Actividad 2
 
-//TERMINADA POR AHORA
-
 De nuevo una actividad grupal en la cual escribiremos juntos nuestra primera aplicación y analizaremos las diferentes partes que la componen.
 Genera un proyecto con el generador de proyectos de openframeworks.
 Abre el proyecto en Visual Studio.
 Modifica el archivo ofApp.h así:
+
+```cpp
+
 #pragma once
 
 #include "ofMain.h"
@@ -27,7 +28,11 @@ class ofApp : public ofBaseApp{
 
 };
 
+```
+
 Ahora modifica el archivo ofApp.cpp así:
+
+```cpp
 
 #include "ofApp.h"
 
@@ -63,6 +68,8 @@ void ofApp::mousePressed(int x, int y, int button){
     particleColor = ofColor(ofRandom(255), ofRandom(255), ofRandom(255));
 }
 
+```
+
 Analicemos juntos este código:
 
 - ¿Qué fue lo que incluimos en el archivo .h?
@@ -71,7 +78,7 @@ Se incluyo un void setup, un update, asi como draw, mouse moved, pressed. Ademá
 
 - ¿Cómo funciona la aplicación?
 
-Se generan esferas blancas que van siguiendo el movimiento del mouse. En si, se generan 50 esferas, y si la cantidad es mayor a 100, las esferas anteriores se borran y generan nuevas.
+Se generan esferas blancas que van siguiendo el movimiento del mouse, y si la cantidad es mayor a 100, las esferas anteriores se borran y generan nuevas.
 
 - ¿Qué hace la función mouseMoved?
 
@@ -87,7 +94,7 @@ Elige el color por defecto del fondo y las esferas (en este caso, fondo negro y 
 
 - ¿Qué hace la función update?
 
-Actualiza el programa.
+Actualiza variables o la logica del programa.
 
 - ¿Qué hace la función draw?
 
