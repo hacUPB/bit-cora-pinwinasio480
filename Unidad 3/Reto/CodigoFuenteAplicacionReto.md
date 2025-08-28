@@ -57,7 +57,7 @@ ofApp.cpp
 	ofApp::setup() {
 
 	ofSetVerticalSync(true); //Activa la sincronización vertical, lo cual hace
-	ofBackground(225); //Color de la pantalla
+	ofBackground(255); //Color de la pantalla
 
 	uiFont.load("verdana.ttf", 12, true, true);
 
