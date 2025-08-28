@@ -1,12 +1,12 @@
 ### Actividad 6
 
-//TERMINADO
-
 El código anterior tiene un problema. ¿Puedes identificar cuál es? ¿Cómo lo solucionarías? Recuerda que deberías poder seleccionar una esfera y moverla con el mouse.
 
 El problema era que cuando seleccionaba una esfera, esta no se me despegaba del mouse, y al seleccionar otra, ya no me dejaba seleccionar más esferas. El problema era en que hacia falta la función mouseReleased(), al tener esta función, si yo puedo mover las esferas que yo desee con el mouse siempre y cuando mantenga click, dejo aqui adjunto el codigo completo del ofApp.h y ofApp.cpp:
 
 ofApp.h:
+
+```cpp
 
 #pragma once
 
@@ -44,8 +44,11 @@ private:
     Sphere* selectedSphere;
 };
 
+```
 
 ofApp.cpp:
+
+```cpp
 
 #include "ofApp.h"
 
@@ -133,3 +136,5 @@ void ofApp::mouseReleased(int x, int y, int button) {
         selectedSphere = nullptr;  
     }
 }
+
+```

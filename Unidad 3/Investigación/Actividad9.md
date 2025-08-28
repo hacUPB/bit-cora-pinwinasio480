@@ -1,8 +1,9 @@
 ### Actividad 9
 
-//PENDIENTE
-
 Considera el siguiente código. El archivo ofApp.h es el siguiente:
+
+```cpp
+
 #pragma once
 
 #include "ofMain.h"
@@ -19,6 +20,8 @@ public:
 private:
     vector<ofVec2f*> heapObjects;
 };
+
+```
 
 Y el archivo `ofApp.cpp` es el siguiente:
 
@@ -52,6 +55,7 @@ void ofApp::keyPressed(int key){
 void ofApp::mousePressed(int x, int y, int button){
     heapObjects.push_back(new ofVec2f(x, y));
 }
+
 ```
 
 - ¿Qué sucede cuando presionas la tecla “f”?
@@ -65,3 +69,5 @@ if(!heapObjects.empty()) {
     delete heapObjects.back();
     heapObjects.pop_back();
 }
+
+Primero se revisa si heapObjects esta vacio, el signo de exclamación es para negar la condición, por lo que solo aplica si hay un elemento, en casp de que no se niegue, elimanara elimina el objeto en el heap y con pop_back se elimina el puntero.

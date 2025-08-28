@@ -8,10 +8,11 @@ El siguiente ejemplo se supone (en la actividad que sigue vas a corregir un erro
 
 Modifica el archivo `ofApp.h` de la siguiente manera:
 
+```cpp
+
 #pragma once
 
 #include "ofMain.h"
-
 
 class Sphere {
 public:
@@ -122,6 +123,8 @@ void ofApp::mousePressed(int x, int y, int button){
         }
     }
 }
+
+```
 ​
 ¿Cuál es la definición de un puntero?
 

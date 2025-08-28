@@ -1,9 +1,10 @@
 ### Actividad 7
 
-//TERMINADO POR AHORA
-
 Ahora te voy a proponer que reflexiones profundamente sobre el manejo de la memoria en un programa. Se trata de un experimento en el que tienes que analizar por qué está funcionando mal.
 Modifica el archivo ofApp.h de la siguiente manera:
+
+```cpp
+
 #pragma once
 
 #include "ofMain.h"
@@ -31,7 +32,11 @@ private:
     void createObjectInStack();
 };
 
+```
+
 Y el archivo ofApp.cpp así:
+
+```cpp
 
 #include "ofApp.h"
 
@@ -86,12 +91,17 @@ void ofApp::createObjectInStack() {
     ofLog() << "Object created in stack: Position (" << localSphere.x << ", " << localSphere.y << ")";
     localSphere.draw();
 }
+
+```
 ​
 ¿Qué sucede cuando presionas la tecla “c”?
 
 Cuando se oprime la tecla "c" me aparece un texto en el que se menciona que un objeto fue creado en una posición, pero no me aparece ningun objeto en pantalla.
 
 Realiza esta modificación a la función createObjectInStack donde claramente se está creando un objeto, pero se está creando en el heap y no en el stack, así que no te dejes confundir por el nombre de la función.
+
+```cpp
+
 void ofApp::createObjectInStack() {
     // Sphere localSphere(ofRandomWidth(), ofRandomHeight(), 30);
     // globalVector.push_back(&localSphere);
@@ -102,7 +112,9 @@ void ofApp::createObjectInStack() {
     ofLog() << "Object created in heap: Position (" << heapSphere->x << ", " << heapSphere->y << ")";
     heapSphere->draw();
 }
-​
+
+```​
+
 ¿Qué sucede cuando presionas la tecla “c”?
 
 Ahora, al oprimir la tecla "c", ahora me genera una esfera con un color y posición aleatoria, cabe aclarar que solo es posible generar una esfera cada vez que se inicie el programa
