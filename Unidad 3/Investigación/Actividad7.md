@@ -91,8 +91,8 @@ void ofApp::createObjectInStack() {
     ofLog() << "Object created in stack: Position (" << localSphere.x << ", " << localSphere.y << ")";
     localSphere.draw();
 }
-
 ```
+
 ​
 ¿Qué sucede cuando presionas la tecla “c”?
 
