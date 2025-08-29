@@ -100,7 +100,7 @@ Cuando se oprime la tecla "c" me aparece un texto en el que se menciona que un o
 
 Realiza esta modificación a la función createObjectInStack donde claramente se está creando un objeto, pero se está creando en el heap y no en el stack, así que no te dejes confundir por el nombre de la función.
 
-
+```cpp
 void ofApp::createObjectInStack() {
     // Sphere localSphere(ofRandomWidth(), ofRandomHeight(), 30);
     // globalVector.push_back(&localSphere);
@@ -111,7 +111,7 @@ void ofApp::createObjectInStack() {
     ofLog() << "Object created in heap: Position (" << heapSphere->x << ", " << heapSphere->y << ")";
     heapSphere->draw();
 }
-
+```
 
 ¿Qué sucede cuando presionas la tecla “c”?
 
