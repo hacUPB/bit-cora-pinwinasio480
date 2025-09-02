@@ -6,6 +6,19 @@ Vas a reportar en tu bitácora de aprendizaje:
 
 1. **Entiende la aplicación**: comienza explorando detenidamente cómo funciona el programa. Usa un un modelo del lenguaje como ChatGPT y el depurador para que verifiques las explicaciones que te propone ChatGPT. Puedes escribir el prompt: quiere entender de manera muy detallada el siguiente programa escrito en C++ y el openframeworks. Luego le das el código. Ve preguntando lo que no entiendas. recuerda ir usando al mismo tiempo el depurador de visual studio.
 
+Acorde a la información propuesta por Chat GPT, el programa lo que realiza es crear una lista enlazada de objetos Node (esto se crea dentro de una clase LinkedList, y dichos Node cuenta con un x, y y next.) Toda esa lista reperesenta a la serpiente, head es su cabeza y tail es la parte trasera, cada frame al cabeza toma la posición del mouse y cada frame tomala posición del mouse y cada segmento toma la posición anterior de su antecesor, por eso “siguen” al mouse.
+
+Por tra
+
+ofApp::setup() añade 10 nodos (y el constructor del LinkedList ya crea 1, así que inicialmente hay 11).
+
+keyPressed('c') llama snake.clear() para eliminar todos los nodos y liberar memoria.
+
+display() dibuja cada nodo como un círculo rojo.
+
+
+
+
 
 
 2. **Realiza evaluaciones formativas**. Dile a ChatGPT que te genere preguntas para verificar si entiendes cómo funciona el programa. Trata de verificar tus hipótesis usando el depurador y luego con las conclusiones del experimento responde la pregunta de ChatGPT. Continúa con este proceso hasta que estés seguro de que entiendes cómo funciona el programa.
