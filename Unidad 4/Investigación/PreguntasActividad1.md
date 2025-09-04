@@ -49,7 +49,7 @@ n. ¿Es necesario llamar ofBackground() en setup() si en draw() también se llam
 
 3. ¿Qué es una lista enlazada y en qué se diferencia de un arreglo en cuanto a la forma en que los elementos están almacenados en la memoria?
 
-
+Una lista enlazada es una estructura de nodos es una estructura dinamica de datos conformada por nodos, 
 
 4. Al observar el código de una lista enlazada en C++, ¿Cómo crees que se vinculan los nodos entre sí? ¿Qué estructura se utiliza para lograr esta conexión?
 
