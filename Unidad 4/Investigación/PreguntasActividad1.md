@@ -9,11 +9,6 @@ Vas a reportar en tu bitácora de aprendizaje:
 Acorde a la información propuesta por Chat GPT, el programa lo que realiza es crear una lista enlazada de objetos Node (esto se crea dentro de una clase LinkedList, y dichos Node cuenta con un x, y y next.) Toda esa lista reperesenta a la serpiente, head es su cabeza y tail es la parte trasera, cada frame al cabeza toma la posición del mouse y cada frame tomala posición del mouse y cada segmento toma la posición anterior de su antecesor, por eso “siguen” al mouse.
 Por otra parte, offApp::setup() añade 10 nodos (y el constructor del LinkedList ya crea 1, así que inicialmente hay 11). keyPressed('c') llama snake.clear() para eliminar todos los nodos y liberar memoria. display() dibuja cada nodo como un círculo rojo.
 
-
-
-
-
-
 2. **Realiza evaluaciones formativas**. Dile a ChatGPT que te genere preguntas para verificar si entiendes cómo funciona el programa. Trata de verificar tus hipótesis usando el depurador y luego con las conclusiones del experimento responde la pregunta de ChatGPT. Continúa con este proceso hasta que estés seguro de que entiendes cómo funciona el programa.
 
 
@@ -49,15 +44,66 @@ n. ¿Es necesario llamar ofBackground() en setup() si en draw() también se llam
 
 3. ¿Qué es una lista enlazada y en qué se diferencia de un arreglo en cuanto a la forma en que los elementos están almacenados en la memoria?
 
-Una lista enlazada es una estructura de nodos es una estructura dinamica de datos conformada por nodos, 
+Una lista enlazada es una estructura de nodos es una estructura dinamica de datos conformada por nodos, los cuales estan conformadospor dos partes:
+
+- El dato
+- Un puntero al siguiente nodo
+
+Los nodos se pueden guardar en cualquier parte del heap y el puntero se encarga de enlazarlos. Un ejemplo de como se veria en Visual es:
+
+```cpp
+
+[10|*] -> [20|*] -> [30|null]
+
+```
+
+Y al depurar con breakpoint esta linea:
+
+```cpp
+
+Node* newNode = new Node(x, y);
+
+```
+Y revisarla en inspecciones rapidas, saldra newNode de esta manera:
+
+```cpp
+
+-		newNode	0x000000000014f1d8 {x=8.306e-39#DEN y=0.00000000 next=0x00000000005a7280 {x=3.41384697 y=1.401e-45#DEN ...} }	Node *
+
+```
+Y dentro de newNode, se encuentran X, Y y Next. Lo cual significa que cada nodo se crea en newNode se guarda en el heap, en donde cada nodo guarda un puntero en Next para poder recorrerlo. Siendo aqui la diferencia entre una arreglo y lista enlazada, pues las listas enlazadas tienen los nodos dispersos pero estan unidos con un puntero, mientras que con una lista enlazada estos estan en direcciones contiguas.
 
 4. Al observar el código de una lista enlazada en C++, ¿Cómo crees que se vinculan los nodos entre sí? ¿Qué estructura se utiliza para lograr esta conexión?
 
+Un factor muy importante son los punteros, dentro del programa cuando se hace un new Node(), se crea un nuevo nodo en la memoria, mientras que el nodo anterior apunta al nuevo a traves de un next, con lo que de esa forma se forma una cadena de nodos conectados por punteros.
 
+Si lo vemos en como se representa dentro del programa, un ejemplo para explicar la estructura de que logra dicha conexión es:
+
+```cpp
+
+Node* next;
+
+```
 
 5. ¿Cómo se gestiona la memoria en una lista enlazada? Investiga cómo se crea y se destruye un nodo en memoria utilizando el operador new y delete en C++.
 
+En este caso, para crear un nodo, utilizo el operador new:
 
+```cpp
+
+Node* newNode = new Node(x, y);
+
+```
+
+Y para eliminarlos, se debe implementar un operador delete:
+
+```cpp
+
+delete current;
+
+```
+
+Recorriendo todos los nodos y liberando memoria en el heap. En ptras palabras, la gestión de una lista enlazada se basa en como yo puedo manualmente crear nodos con new y eliminarlos con delete.
 
 6. Considerando la estructura de una lista enlazada, ¿qué ventajas ofrece en comparación con un arreglo cuando se trata de insertar o eliminar elementos en posiciones intermedias?
 
