@@ -107,9 +107,12 @@ Recorriendo todos los nodos y liberando memoria en el heap. En ptras palabras, l
 
 6. Considerando la estructura de una lista enlazada, ¿qué ventajas ofrece en comparación con un arreglo cuando se trata de insertar o eliminar elementos en posiciones intermedias?
 
-
+Hablando de las ventajas, al poder gestionar manualmente los nodos al gusto que uno quiera, no debo mover todos los elementos o grandes bloques, cosa que pasa en el arreglo, sino que solo se ajustan los punteros, además de que pueden crecer dinamicamente en la memoria del heap sin un tamaño fijo.
 
 7. En el código presentado, ¿Cómo se asegura que no haya fugas de memoria? ¿Qué papel juega el destructor en la clase LinkedList?
+
+
+
 8. ¿Qué sucede en la memoria cuando se invoca el método clear() en una lista enlazada? Explica paso a paso cómo se liberan los recursos.
 
 
