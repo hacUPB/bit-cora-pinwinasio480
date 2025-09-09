@@ -10,6 +10,9 @@ Refuerzo de la idea: El programa empieza con la pantalla vacia, hay una secuenci
 
 Por cierto, ten en cuenta que estoy trabajando con OpenFrameWorks.
 
+
+NOTA: SOLO SE OCULTA LOS RECTANGULOS, FALTA OTRA TECLA PARA VERLOS DEVUELTA.
+
 tipo con rayas y que dependiendo de que tecla oprime, puedo agregar más rayas de colores, dichas rayas se pueden mover y si oprimo otra tecla se pueden eliminar, ¿que sugieres para hacerlo más creativo?
 
 2. **Gestión de memoria:** ¿Qué consideraciones debes tener en cuenta al gestionar dinámicamente la memoria de los objetos? ¿Cómo asegurar que no haya fugas de memoria?
