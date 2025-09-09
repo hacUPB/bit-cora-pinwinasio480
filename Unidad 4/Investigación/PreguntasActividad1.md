@@ -111,30 +111,32 @@ Hablando de las ventajas, al poder gestionar manualmente los nodos al gusto que 
 
 7. En el código presentado, ¿Cómo se asegura que no haya fugas de memoria? ¿Qué papel juega el destructor en la clase LinkedList?
 
-
+Para asegurar que no haya fugas de memoria, LinkedList hace uso del método clear() en donde recorrera la lista eliminando los nodos con delete. Y hablando sobre el papel destructor de la clase anteriormente mencionada, este es como un recordatorio al programa de liberar los nodos cuando por ejemplo el objeto LinkedList desaparezca.
 
 8. ¿Qué sucede en la memoria cuando se invoca el método clear() en una lista enlazada? Explica paso a paso cómo se liberan los recursos.
 
-
+Cuando se invoca clear(), la lista recorre desde head hasta el final; en cada nodo se guarda la dirección del que le sigue, se llama a delete sobre el nodo y avanza al siguiente (lo que implica que se ejecute su destructor y devuelva la memoria al heap). Por ultimo, asigna head = tail = nullptr y size = 0, guarda la dirección del nodo posterior antes de delete y pone head/tail a nullptr al final, evitando de esta forma fugas y puntos colgantes.
 
 9. Explica cómo cambia la estructura en memoria de una lista enlazada al agregar un nuevo nodo al final de la lista. ¿Cómo afecta esto al rendimiento de la lista enlazada?
 
+Al agregar otro nodo al final, en este caso, si el puntero next que antes era del ultimo nodo tail, ahora pasa a ser del nuevo nodo, y tail se mueve al nuevo ultimo nodo. Y gracias al puntero tail, la inserción ocurre en tiempos constante ya que no se debe recorrer la lista completa.
 
 
 10. Analiza una situación en la que utilizar una lista enlazada sería más ventajoso que utilizar un arreglo. Justifica tu respuesta considerando la gestión de memoria y las operaciones de inserción y eliminación.
 
-
+Podria decirse que es más ventajoso debido a que con la lista enlazada no necesito mover todos los elementos, sino que solo ajustar los punteros en donde los requiera, además de que la memoria se gestiona en el heap, es decir, si la lista aumenta o disminuye, no debo reservar más bloques.
 
 11. Después de estudiar el manejo de memoria en listas enlazadas, ¿Cómo aplicarías este conocimiento para diseñar una estructura de datos personalizada para una aplicación creativa? ¿Qué aspectos considerarías para asegurar la eficiencia y evitar fugas de memoria?
 
-
+Si quisiera hacer una aplicación tipo videojuego ligero, podria aplicar la gestión de memoria en lista enlazada si fuera un videojuego como Slither.io, en donde por ejemplo, al igual que aqui en donde debo limpiar los nodos si los elementos de la serpiente desaparecen, en el caso nuevo seria eliminar los nodos de cada serpiente de cada jugador al ser eliminado, destruyendose cuando ya no se necesite en lugar de esperar hasta el final. Y para asegurar que no haya inconvenientes, usaria el método clear().
 
 12. Reflexiona sobre las diferencias en la gestión de memoria entre C++ y un lenguaje con recolección de basura automática como C#. ¿Qué ventajas y desafíos encuentras en la gestión explícita de memoria en C++ al trabajar con estructuras de datos?
 
-
+Supongo que si hablamos de ambos lados, los contraste que tienen, porque con uno, puedo hacerlo manualmente, pero con más riesgos, pero con el otro no tengo libertad pero es más seguro.
 
 13. Imagina que estás optimizando una pieza de arte generativo que usa listas enlazadas para representar elementos en movimiento. ¿Qué consideraciones tomarías en cuenta para garantizar que la gestión de la memoria sea eficiente y que no ocurran fugas de memoria?
 
+Lo más escensial que considero que debe tomarse en cuenta, es la eliminación de nodos que ya no sean necesarios, usar los punteros next para no perder acceso a parte de la lista, usar el método clear, y no menos importante, insertar nodos cuando se vaya haciendo cada movimiento.
 
 
 14. **Pruebas:** pregunta a ChatGPT cómo podrías probar las partes del programa y el programa completo. Luego realiza las pruebas y verifica si los resultados coinciden con tus expectativas.
