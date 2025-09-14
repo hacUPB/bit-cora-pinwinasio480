@@ -18,7 +18,11 @@ b. ¿Dónde se posiciona inicialmente el head al construirse la lista?
 
 c. ¿Quién se mueve primero en update(): la cabeza o el resto del cuerpo?
 
+La cabeza.
+
 d. ¿Qué pasa cuando presionas la tecla 'c' durante la ejecución?
+
+La serpiente desaparece del programa (se borra).
 
 e. Tras limpiar la lista, ¿update() o display() llegan a crashear?
 
