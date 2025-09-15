@@ -13,7 +13,11 @@ Acorde a la información propuesta por Chat GPT, El programa crea una lista enla
 
 a. ¿Cuántos nodos tiene la serpiente justo después de que se ejecute setup()?
 
+R/ 11 nodos, 1 del LinkedList y los otros 10 son despues del setup().
+
 b. ¿Dónde se posiciona inicialmente el head al construirse la lista?
+
+R/ Inicialmente head se inicializa en el centro de la ventana.
 
 c. ¿Quién se mueve primero en update(): la cabeza o el resto del cuerpo?
 
@@ -29,23 +33,39 @@ R/ No, porque se manejan los punteros nulos adecuadamente
 
 f. ¿Qué ocurre si llamas addNode() después de haber hecho un clear()?
 
+R/ Se crea uno nuevo y se reinicia, asignado los nuevos a head y tail.
+
 g. ¿La complejidad de addNode() es O(1) o O(n)?
+
+R/ O(1).
 
 h. ¿Cuál es la complejidad de update() y display()?
 
+R/ El hecho de que ambas funcionan igual dependiendo del tamaño y deben recorrer todos los punteros en la lista, en este caso, la complejidad es O(n).
+
 i. ¿Hay riesgo de problemas de memoria si copias un LinkedList (p. ej. LinkedList b = a;)?
+
+R/ Se inestabiliza el programa ya que al no tener una copia del constructor, los punteros de head y tail serian practicamente inutiles
 
 j. ¿Es posible que el head aparezca en (0,0) al inicio? ¿Por qué?
 
+R/ No, porque head debe inicializarse en el centro de la ventana.
+
 k. ¿Qué dibuja exactamente la función display() en pantalla?
 
-La serpiente
+R/ La serpiente
 
 l. ¿Se liberan todos los nodos correctamente cuando la aplicación se cierra?
 
+R/ Si, porque en el destructor se esta llamando a clear().
+
 m. ¿Qué sucede visualmente si mueves el mouse muy rápido?
 
+R/ Los circulos que conforman la serpiente comienzan a separarse, pero se vuelven a juntar cuando disminuyes la velocidad.
+
 n. ¿Es necesario llamar ofBackground() en setup() si en draw() también se llama cada frame?
+
+R/ No, porque si dibujo algo sin limpiar la pantalla en cada frame, se quedara ahi y no se ira.
 
 
 3. ¿Qué es una lista enlazada y en qué se diferencia de un arreglo en cuanto a la forma en que los elementos están almacenados en la memoria?
@@ -165,3 +185,87 @@ En resumen, C++ ofrece libertad y eficiencia a cambio de más responsabilidad, m
 Lo más esencial es asegurarse de eliminar los nodos que ya no sean necesarios, mantener correctamente los punteros next para no perder acceso a los nodos restantes, usar el método clear() cuando sea necesario para liberar memoria de manera segura y, por último, insertar nodos de manera controlada a medida que se generan los movimientos.
 
 14. **Pruebas:** pregunta a ChatGPT cómo podrías probar las partes del programa y el programa completo. Luego realiza las pruebas y verifica si los resultados coinciden con tus expectativas.
+
+**Probar partes individuales (pruebas unitarias)**
+
+a. Constructor de LinkedList y creación de nodos
+
+Objetivo: verificar que al crear la lista, se inicialicen correctamente head, tail y size.
+
+Cómo probar:
+
+Ejecuta LinkedList snake;.
+
+Revisa en el depurador que head y tail apunten al primer nodo y que size == 1.
+
+Imprime los valores x y y del nodo inicial.
+
+b. addNode()
+
+Objetivo: asegurarse de que los nuevos nodos se agregan al final y tail se actualiza.
+
+Cómo probar:
+
+Llama snake.addNode().
+
+Comprueba que tail apunta al nuevo nodo.
+
+Revisa que size haya aumentado en 1.
+
+Observa que next del penúltimo nodo apunta al nuevo nodo.
+
+c. clear()
+
+Objetivo: liberar memoria correctamente y dejar la lista vacía.
+
+Cómo probar:
+
+Llama snake.clear().
+
+Verifica que head == nullptr, tail == nullptr y size == 0.
+
+Confirma que no hay punteros colgantes revisando en depurador.
+
+
+d. update()
+
+Objetivo: los nodos deben seguir la cabeza (posición del mouse).
+
+Cómo probar:
+
+Mueve el mouse en la ventana.
+
+Observa en depurador los valores x y y de cada nodo.
+
+Verifica que cada nodo adopte la posición anterior de su antecesor.
+
+e. display()
+
+Objetivo: dibujar correctamente todos los nodos en pantalla.
+
+Cómo probar:
+
+Observa que cada nodo aparece como círculo rojo.
+
+Confirma que el número de círculos coincide con size.
+
+Mueve el mouse rápido y revisa que los círculos siguen correctamente.
+
+**Probar el programa completo**
+
+Inicialización: se ve la serpiente en pantalla.
+
+
+Movimiento del mouse: la serpiente sigue suavemente.
+
+
+Tecla 'c': limpia la lista sin errores.
+
+
+Agregar nodos después de limpiar: la lista se reinicia correctamente.
+
+
+Mover el mouse muy rápido: no genera crash ni comportamiento inesperado.
+
+
+Cierre de la aplicación: todos los nodos se liberan sin memory leaks (puedes usar herramientas como Visual Studio Diagnostic Tools para confirmarlo).
