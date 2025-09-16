@@ -1,3 +1,3 @@
 [Intento de video del reto](https://youtu.be/EZ0rPw566q4)
 
-NOTA: Al inicio cuando dije Actividad 4, queria decir Unidad 4 jeje.
+NOTA: Al inicio cuando dije Actividad 4, queria decir Unidad 4 jeje y si no alcanzo a subir otro video: Realmente con 'z' se borra el último rectangulo creado, no el primero, eso es importante aclararlo para evitar malentendidos si es que ústed no ha visto la bitacora o el video, ya que si eliminara el primer rectangulo, seria una cola, pero al eliminar el último, se usa la pila.
