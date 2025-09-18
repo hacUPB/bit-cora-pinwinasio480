@@ -85,3 +85,15 @@ R/
 Complex ocupa 12 bytes ,
 metodo no ocupan espacio en la misma 
 Static modifica el tiempo de vida de la variable: la clase cuando se crea una instancia, todos los atributos tendran el mismo valor; pueden existir si no hay instancias de la clase; el timepo de vida es mayor al de esas clases.
+
+- ¿Cómo afectan los datos estáticos al tamaño de la instancia?
+
+R/ En este caso, si lo vemos desde diferentes apartados, los métodos no afectan el tamaño de la instancia, las datos estaticos tampoco, los unicos que ueden llegar a afectar, son los datos dinamicos, pero solo aplica con los punteros.
+
+- ¿Qué diferencias hay entre datos estáticos y dinámicos en términos de memoria?
+
+R/ En terminos de memoria, hay varias diferencias: los datos estaticos se almacenan en la sección de datos estaticos y existen desde qe comienza hasta que finaliza el programa; por otro lado, los datos dinamicos se almacenan en el heap y el tiempo depende de hasta que se llame un delete o free.
+
+- Prompt para ChatGPT: explícame cómo el uso de variables estáticas y dinámicas en una clase afecta el tamaño de sus instancias. ¿Las variables estáticas ocupan espacio en cada objeto?
+
+SESIÓN 2 DE LA TAREA
