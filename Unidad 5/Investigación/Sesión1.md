@@ -80,6 +80,8 @@ R/
 
 1.3
 
+![alt text](UNIDAD5GOMEZ.jpg)
+
 Complex ocupa 12 bytes ,
 metodo no ocupan espacio en la misma 
-Para poder ca
+Static modifica el tiempo de vida de la variable: la clase cuando se crea una instancia, todos los atributos tendran el mismo valor; pueden existir si no hay instancias de la clase; el timepo de vida es mayor al de esas clases.
