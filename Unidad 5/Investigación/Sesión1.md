@@ -76,21 +76,21 @@ std::cout << "Dirección de p1.y: " << &(p1.y) << std::endl;
 
 ```
 
+![alt text](UNIDAD5ESPITIA.jpg)
+
 ### Reflexión Guiada:
 
 - ¿Los atributos están almacenados de forma contigua?
 
-R/
+R/ Estan almacenedas en ubicaciones muy cercanas casi por la mizma zona.
 
 - ¿Qué indica el tamaño del objeto sobre su estructura interna?
 
-R/
+R/ Que tantos bytes ocupa en la memoria interna, en este caso, el tamaño del objeto ocupa 8 bytes.
 
 - Prompt para ChatGPT: ¿Cómo se almacenan los objetos en memoria en C++? Si tengo dos instancias de Particle, ¿Cómo se relacionan sus direcciones de memoria? ¿Los atributos están contiguos?
 
 R/
-
-![alt text](UNIDAD5ESPITIA.jpg)
 
 ## Análisis de diferencias
 
@@ -166,12 +166,7 @@ R/ En terminos de memoria, hay varias diferencias: los datos estaticos se almace
 
 - Prompt para ChatGPT: explícame cómo el uso de variables estáticas y dinámicas en una clase afecta el tamaño de sus instancias. ¿Las variables estáticas ocupan espacio en cada objeto?
 
-
-
-
-
-
-## Reflexión
+### Reflexión
 
 Documenta en tu bitácora de aprendizaje:
 

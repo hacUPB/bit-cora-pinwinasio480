@@ -24,6 +24,8 @@ public:
 
 - Analiza la vtables. ¿En qué parte de la memoria se encuentran las vtable de cada objeto?
 
+R/ Hipotesis: En el stack
+
 ```cpp
 
 Base b;
