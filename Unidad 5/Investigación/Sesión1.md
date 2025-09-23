@@ -15,11 +15,21 @@ public:
 
 - ¿Qué representa la clase Particle?
 
-R/ 
+R/ La clase Particle representa un modelo de una particula 2D en el que su estado es su posición en los planos X y Y. Acorde a la inteligencia artificial (ChatGPT), es util para simulaciones o juegos en donde un objeto "vive" en un punto plano y puede moverse.
 
 - ¿Cómo interactúan sus atributos y métodos?
 
-R/
+R/ En ese fragmento, por parte de los atributos, float x, y representan el estado de la particula y son variables miembro, es decir, cada objeto particle cuenta con su X y Y,
+Y por parte de los métodos:
+
+void move(float dx, float dy) {
+    x += dx;
+    y += dy;
+}
+
+El metodo depende del estado, es decir, move si o si necesita X y Y con valores, cuando se ejecuta move, cambia el estado (modifica X y Y).
+
+En pocas palabras, los atributos son los datos y el método es el comportamiento de los datos.
 
 - Prompt para ChatGPT: explícame en detalle qué es un objeto en C++ y cómo se relaciona con una clase. Usa el ejemplo de una clase Particle con atributos `x` y `y` y un método `move`.
 
