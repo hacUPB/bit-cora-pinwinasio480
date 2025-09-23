@@ -101,3 +101,5 @@ public:
 
 
 - Conclusión: cómo esta comprensión afecta el diseño de sistemas.
+
+

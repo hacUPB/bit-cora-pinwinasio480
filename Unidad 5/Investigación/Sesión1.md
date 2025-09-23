@@ -121,6 +121,8 @@ std::cout << "Tamaño de Complex: " << sizeof(Complex) << " bytes" << std::endl;
 
 ```​
 
+![alt text](UNIDAD5GOMEZ.jpg)
+
 - Agregar datos estáticos y dinámicos:
 
 ```cpp
@@ -146,6 +148,12 @@ public:
 
 ```
 
+![alt text](CAPTURA545960.png)
+
+![alt text](DIRECCIONES545960.png) 
+
+NOTA: un metodo se crea en.text, cuando uso un metodo virtual, se crea un puntero virtual cuando se hace un metodo virtual
+
 NOTA: Complex ocupa 12 bytes, metodo no ocupan espacio en la misma, Static modifica el tiempo de vida de la variable: la clase cuando se crea una instancia, todos los atributos tendran el mismo valor; pueden existir si no hay instancias de la clase; el timepo de vida es mayor al de esas clases.
 
 - ¿Cómo afectan los datos estáticos al tamaño de la instancia?
@@ -158,9 +166,12 @@ R/ En terminos de memoria, hay varias diferencias: los datos estaticos se almace
 
 - Prompt para ChatGPT: explícame cómo el uso de variables estáticas y dinámicas en una clase afecta el tamaño de sus instancias. ¿Las variables estáticas ocupan espacio en cada objeto?
 
-![alt text](UNIDAD5GOMEZ.jpg)
 
-### Reflexión
+
+
+
+
+## Reflexión
 
 Documenta en tu bitácora de aprendizaje:
 
