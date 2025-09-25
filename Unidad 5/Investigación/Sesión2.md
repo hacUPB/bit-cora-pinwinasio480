@@ -97,9 +97,11 @@ void ofApp::setup(){
 
 ```
 
-Aparece que el tamañode la instancia ahora ocupa 8 bytes (es decir, el equivalente al tamaño de un puntero de 64 bits)
+Aparece que el tamaño de la instancia ahora ocupa 8 bytes (es decir, el equivalente al tamaño de un puntero de 64 bits)
 
 - Verificar cómo se almacenan estos punteros.
+
+
 
 ## Reflexión Guiada:
 
