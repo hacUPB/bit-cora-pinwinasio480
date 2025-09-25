@@ -27,6 +27,9 @@ int main() {
     return 0;
 }
 ```
+Por lo que puedo observar hasta ahora, las tres variables de int estan almacenadas en la memoria de la siguiente manera:
+
+![alt text](image-2.png)
 
 > **Prompt para ChatGPT:** ¿Cómo implementa el compilador el encapsulamiento en C++? Si los miembros privados aún ocupan espacio en el objeto, ¿Qué impide que se acceda a ellos desde fuera de la clase?
 >

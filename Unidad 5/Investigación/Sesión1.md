@@ -183,5 +183,13 @@ R/ En terminos de memoria, hay varias diferencias: los datos estaticos se almace
 Documenta en tu bitácora de aprendizaje:
 
 - ¿Qué es un objeto desde la perspectiva de la memoria?
+
+R/ Desde la perspectiva de la memoria, un objeto es una instancia de la misma clase en donde se encuentra y tiene los valores de los atributos.
+
 - ¿Cómo influyen los atributos y métodos en el tamaño y estructura del objeto?
+
+R/ 
+
 - Conclusión: resumir los hallazgos y cómo esto impacta el diseño de clases.
+
+R/
