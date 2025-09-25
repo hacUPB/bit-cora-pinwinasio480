@@ -37,11 +37,17 @@ En pocas palabras, los atributos son los datos y el método es el comportamiento
 
 R/
 
+Clase: Es un molde que define qué datos y qué acciones tendrá un tipo (ej: Particle tiene x, y y move).
+
+Objeto: Es una instancia concreta de la clase, vive en memoria y tiene sus propios valores de x e y.
+
+Relación: La clase describe, el objeto existe. Los métodos de la clase (move) usan y modifican los atributos de ese objeto a través del puntero oculto this.
+
 ## Explorando la memoria
 
 1.2 Considera los siguientes pasos:
 
-- Crear instancias:
+Crear instancias:
 
 ```cpp
 
@@ -50,7 +56,7 @@ Particle p2;
 
 ```
 
-- Explorar la memoria usando punteros:
+Explorar la memoria usando punteros:
 
 ```cpp
 
@@ -59,7 +65,7 @@ std::cout << "Dirección de p2: " << &p2 << std::endl;
 
 ```
 
-- Determinar el tamaño del objeto:
+Determinar el tamaño del objeto:
 
 ```cpp
 
@@ -67,7 +73,7 @@ std::cout << "Tamaño de Particle: " << sizeof(Particle) << " bytes" << std::end
 
 ```
 
-- Imprimir direcciones de atributos:
+Imprimir direcciones de atributos:
 
 ```cpp
 
@@ -90,7 +96,13 @@ R/ Que tantos bytes ocupa en la memoria interna, en este caso, el tamaño del ob
 
 - Prompt para ChatGPT: ¿Cómo se almacenan los objetos en memoria en C++? Si tengo dos instancias de Particle, ¿Cómo se relacionan sus direcciones de memoria? ¿Los atributos están contiguos?
 
-R/
+R/ Dentro de un objeto, los atributos están contiguos (con posible padding).
+
+Dos objetos distintos ocupan bloques separados.
+
+Si se declaran en stack seguidos, suelen quedar contiguos, separados exactamente por el tamaño del objeto.
+
+En heap (new), no hay garantía de contigüidad entre distintas instancias.
 
 ## Análisis de diferencias
 
@@ -112,7 +124,7 @@ public:
 
 ```
 ​
--Compara los tamaños:
+Compara los tamaños:
 
 ```cpp
 

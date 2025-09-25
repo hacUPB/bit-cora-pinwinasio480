@@ -24,7 +24,7 @@ public:
 
 - Analiza la vtables. ¿En qué parte de la memoria se encuentran las vtable de cada objeto?
 
-R/ Hipotesis: En el stack
+R/ Las vtables se encuentran en la memoria estática del ejecutable.
 
 ```cpp
 
@@ -37,15 +37,13 @@ std::cout << "Vtable de Derived: " << *(void**)&d << std::endl;
 
 - ¿Cómo afecta la presencia de métodos virtuales al tamaño del objeto?
 
-
+R/ Los métodos virtuales aumentan el tamaño del objeto porque añaden un puntero oculto (vptr).
 
 - ¿Qué papel juegan las vtables en el polimorfismo?
 
-
+R/ Las vtables permiten el polimorfismo dinámico: en tiempo de ejecución, deciden qué implementación llamar según la clase real del objeto.
 
 - Prompt para ChatGPT: ¿Cómo se implementan los métodos virtuales en C++? Explica el concepto de vtable y cómo se utiliza para resolver llamadas a métodos virtuales.
-
-
 
 ![alt text](SESION2.1SAMUEL.jpg)
 
