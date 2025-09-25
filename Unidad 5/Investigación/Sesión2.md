@@ -49,7 +49,7 @@ R/ Las vtables permiten el polimorfismo dinámico: en tiempo de ejecución, deci
 
 ## Uso de punteros y referencias
 
-2.1. Implementar una clase con punteros a funciones:
+2.2. Implementar una clase con punteros a funciones:
 
 ```cpp
 
@@ -65,16 +65,41 @@ public:
 };
 
 ```
+![alt text](image.png)
 
 ### Analizar el impacto en memoria:
 
 - Observar si el tamaño de la instancia cambia al usar punteros a funciones.
 
+Con la modificación que me sugirio la inteligencia artificial en el .cpp por el momento:
 
+```cpp
+
+void ofApp::setup(){
+
+    // VTABLES
+    Base b;
+    Derived d;
+    std::cout << "Vtable de Base: " << *(void**)&b << std::endl;
+    std::cout << "Vtable de Derived: " << *(void**)&d << std::endl;
+
+    // FUNCTION POINTER
+    FunctionPointerExample fpe;
+    std::cout << "Tamaño de FunctionPointerExample: " << sizeof(fpe) << " bytes" << std::endl;
+    std::cout << "Valor inicial de funcPtr: " << (void*)fpe.funcPtr << std::endl;
+
+    fpe.assignFunction();
+    std::cout << "Valor de funcPtr después de assignFunction: " << (void*)fpe.funcPtr << std::endl;
+
+    // Llamar a la función a través del puntero
+    fpe.funcPtr();
+}
+
+```
+
+Aparece que el tamañode la instancia ahora ocupa 8 bytes (es decir, el equivalente al tamaño de un puntero de 64 bits)
 
 - Verificar cómo se almacenan estos punteros.
-
-
 
 ## Reflexión Guiada:
 
