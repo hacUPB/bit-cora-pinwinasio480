@@ -45,6 +45,17 @@ R/ Las vtables permiten el polimorfismo dinámico: en tiempo de ejecución, deci
 
 - Prompt para ChatGPT: ¿Cómo se implementan los métodos virtuales en C++? Explica el concepto de vtable y cómo se utiliza para resolver llamadas a métodos virtuales.
 
+R/ 
+
+Los métodos virtuales en C++ se implementan mediante una tabla de funciones virtuales (vtable) y un puntero oculto en cada objeto (vptr).
+
+La vtable es creada por el compilador y contiene direcciones de los métodos virtuales de la clase.
+
+El vptr en cada objeto apunta a la vtable de su clase.
+
+Cuando se llama a un método virtual, el programa consulta la vtable y ejecuta la función correspondiente a la clase real del objeto.
+Esto permite que el polimorfismo dinámico funcione en C++.
+
 ![alt text](SESION2.1SAMUEL.jpg)
 
 ## Uso de punteros y referencias
