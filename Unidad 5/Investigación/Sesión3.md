@@ -31,9 +31,19 @@ Por lo que puedo observar hasta ahora, las tres variables de int estan almacenad
 
 ![alt text](image-2.png)
 
+|Nombre|Valor|Tipo|
+| --- | --- | --- |
+|privateVar|1|int|
+|protectedVar|2|int|
+|publicVar|3|int|
+
 > **Prompt para ChatGPT:** ¿Cómo implementa el compilador el encapsulamiento en C++? Si los miembros privados aún ocupan espacio en el objeto, ¿Qué impide que se acceda a ellos desde fuera de la clase?
 >
 
+R/ Acorde a ChatGPT, 
+Un objeto en C++ es básicamente un bloque de memoria que contiene todos sus atributos (públicos, protegidos y privados). El compilador reserva espacio en memoria sin importar el nivel de acceso y aplica las reglas de acceso en tiempo de compilación.
+Para ponerlo a prueba, cuando se escribe ac.privateVar en main, el compilador detecta que se esta accediendo a un miembro private desde fuera de la clase y antes de generarse un código máquina, el compilador lanza un error de compilación, lo que implica que no llega a traducir a instrucciones que lean o escriban esa parte de la memoria.
+Por otra parte, los miembros privados sí ocupan espacio en memoria y lo que impide que se puedan acceder a ellos desde afuera de la clase es el compilador, debido a que bloquea el acceso directo. Como agregado, en tiempo de ejecución no hay protección real, pero acceder por otros medios no es una buena practica ya que rompe la idea de encapsulación.
 
 ### Hagamos un poco de hackers y rompamos el encapsulamiento
 
@@ -63,6 +73,10 @@ public:
 
 - Intento de acceso ilegal: verifica que no se puede acceder a los miembros privados directamente utilizando el compilador:
 
+Lo que me aparece al intentar compilar solución:
+
+![alt text](image-3.png)
+
 ```cpp
 int main() {
     MyClass obj(42, 3.14f, 'A');
@@ -75,6 +89,8 @@ int main() {
 ```
 
 El código anterior intentará acceder directamente al miembro privado secret1, lo que resultará en un error de compilación.
+
+![alt text](image-4.png)
 
 - Acceso a miembros privados usando reinterpret_cast: ahora, observa cómo violar el encapsulamiento utilizando reinterpret_cast y la aritmética de punteros:
 
@@ -96,6 +112,7 @@ int main() {
     return 0;
 }
 ```
+![alt text](image-5.png)
 
 Ahora reflexiona:
 
@@ -113,7 +130,7 @@ Ahora reflexiona:
 
 Considera los siguientes pasos:
 
-1. Crear clases con herencia:
+3.3 Crear clases con herencia:
 
 class Base {
 public:
@@ -129,6 +146,8 @@ Derived d;
 std::cout << "Dirección de d: " << &d << std::endl;
 std::cout << "Dirección de d.baseVar: " << &(d.baseVar) << std::endl;
 std::cout << "Dirección de d.derivedVar: " << &(d.derivedVar) << std::endl;
+
+![alt text](image-6.png)
 ​
 ¿Cómo se organizan los atributos en memoria?
 ¿Qué sucede si agregamos más niveles de herencia?
@@ -141,7 +160,7 @@ Prompt para ChatGPT: explícame cómo se organiza en memoria un objeto de una cl
 
 Considera los siguientes pasos:
 
-1. Crear una jerarquía polimórfica:
+3.4 Crear una jerarquía polimórfica:
 
 ```cpp
 class Animal {
@@ -164,7 +183,7 @@ public:
 };
 ```
 
-1. Usar punteros de la clase base:
+3.4 Usar punteros de la clase base:
 
 ```cpp
 Animal* animals[] = { new Dog(), new Cat() };
@@ -173,11 +192,13 @@ for (Animal* animal : animals) {
 }
 ```
 
-1. Analizar con un depurador: observa cómo se resuelven las llamadas a makeSound() en tiempo de ejecución.
+![alt text](image-7.png)
+
+3.5 Analizar con un depurador: observa cómo se resuelven las llamadas a makeSound() en tiempo de ejecución.
 - ¿Cómo utiliza el programa las vtables para el polimorfismo?
 - ¿Cuál es el impacto en el rendimiento?
 - Prompt para ChatGPT: ¿Cómo funciona el polimorfismo en C++ a nivel interno? Explica cómo se utilizan las vtables para resolver métodos virtuales en una jerarquía de herencia.
 
-1. Reflexión Individual:
+3.6 Reflexión Individual:
 - ¿Cómo se implementan internamente el encapsulamiento, la herencia y el polimorfismo?
 - Análisis: ventajas y desventajas en términos de eficiencia y complejidad.
