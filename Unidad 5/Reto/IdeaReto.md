@@ -1,6 +1,5 @@
-## Idea para el reto (BETA)
-
-"FIGURAS Y COLORES
+## Idea para el reto 
+"FIGURAS Y COLORES" 
 
 Mi idea para el reto, consiste en diseñar un programa en el que desde openFrameWorks el usuario pueda crear atraves de figuras (como circulos, cuadrados o triangulos) diferentes composicines visuales. Cada figura se dibujaria con un clic del mouse en la posición seleccionada, mientras que al mismo tiempo, si se presiona una tecla específica, con una se podra cambiar las figuras y con la otra, los colores de las mismas figuras a dibujar.
 
