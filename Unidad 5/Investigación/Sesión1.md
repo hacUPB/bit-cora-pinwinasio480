@@ -164,13 +164,13 @@ public:
 
 ![alt text](DIRECCIONES545960.png) 
 
-NOTA: un metodo se crea en.text, cuando uso un metodo virtual, se crea un puntero virtual cuando se hace un metodo virtual
+*NOTA: un metodo se crea en.text, cuando uso un metodo virtual, se crea un puntero virtual cuando se hace un metodo virtual*
 
-NOTA: Complex ocupa 12 bytes, metodo no ocupan espacio en la misma, Static modifica el tiempo de vida de la variable: la clase cuando se crea una instancia, todos los atributos tendran el mismo valor; pueden existir si no hay instancias de la clase; el timepo de vida es mayor al de esas clases.
+*NOTA: Complex ocupa 12 bytes, metodo no ocupan espacio en la misma, Static modifica el tiempo de vida de la variable: la clase cuando se crea una instancia, todos los atributos tendran el mismo valor; pueden existir si no hay instancias de la clase; el timepo de vida es mayor al de esas clases.*
 
 - ¿Cómo afectan los datos estáticos al tamaño de la instancia?
 
-R/ En este caso, si lo vemos desde diferentes apartados, los métodos no afectan el tamaño de la instancia, las datos estaticos tampoco, los unicos que ueden llegar a afectar, son los datos dinamicos, pero solo aplica con los punteros.
+R/ En este caso, si lo vemos desde diferentes apartados, los métodos no afectan el tamaño de la instancia, las datos estaticos tampoco, los unicos que pueden llegar a afectar, son los datos dinamicos, pero solo aplica con los punteros.
 
 - ¿Qué diferencias hay entre datos estáticos y dinámicos en términos de memoria?
 
@@ -178,18 +178,22 @@ R/ En terminos de memoria, hay varias diferencias: los datos estaticos se almace
 
 - Prompt para ChatGPT: explícame cómo el uso de variables estáticas y dinámicas en una clase afecta el tamaño de sus instancias. ¿Las variables estáticas ocupan espacio en cada objeto?
 
+R/ Las variables estáticas son compartidas por todas las instancias de la clase. Se almacenan en la sección de datos estáticos del programa, y no se copian dentro de cada objeto. Por eso no aumentan el tamaño de la instancia.
+
+Las variables dinámicas, en cambio, se manejan con punteros. Lo que se guarda dentro del objeto es solo el puntero (típicamente 4 u 8 bytes, según la arquitectura). La memoria real a la que apunta (reservada con new o malloc) está en el heap y no se incluye dentro del tamaño del objeto.
+
 ### Reflexión
 
 Documenta en tu bitácora de aprendizaje:
 
 - ¿Qué es un objeto desde la perspectiva de la memoria?
 
-R/ Desde la perspectiva de la memoria, un objeto es una instancia de la misma clase en donde se encuentra y tiene los valores de los atributos.
+R/ Desde la perspectiva de la memoria, un objeto es un bloque de memoria reservado que contiene los atributos definidos en su clase, almacenados de forma contigua (con posible padding). Cada objeto tiene su propia copia de esos atributos, mientras que los métodos y atributos estáticos no forman parte de la memoria del objeto.
 
 - ¿Cómo influyen los atributos y métodos en el tamaño y estructura del objeto?
 
-R/ 
+R/ Los atributos de instancia determinan directamente el tamaño del objeto, ya que cada instancia debe almacenar su propio valor para esos atributos. Los métodos no afectan el tamaño, porque el código de los métodos se guarda en la sección de texto del programa y es compartido por todas las instancias. Solo si hay métodos virtuales, se agrega un puntero oculto a la vtable dentro de cada objeto, lo cual sí incrementa el tamaño en unos bytes.
 
 - Conclusión: resumir los hallazgos y cómo esto impacta el diseño de clases.
 
-R/
+R/ Entre los hallazgos mas destacables de esta actividad, esta en como una clase es un modelo que define el estado comportamiento del mismo, como se vio al inicio con la clase Particle, además, los métodos no influyen en el tamaño de la instancias, además de que los atributos estáticos tampoco debido a que no forma parte de la memoria del mismo objeto. No obstante, los atributos dinámicos y métodos virtuales (contando a los punteros virtuales de esos metodos) si. En si, impacta en el diseño de clases tanto en la parte lógica, en como debemos pensar en el costo de memoria de cada atributo y optimizar el objeto, de hecho, gracias a clases como las de Simple y Complex, es posible observar la cantidad de bytes de las mismas.
