@@ -115,14 +115,34 @@ void Particle::onNotify(const std::string& event) {
 
 - Adiciona un nuevo tipo de partícula.
 
+```cpp
+    else if (type == "sunshine") {
+        particle->size = ofRandom(3, 8);
+        particle->color = ofColor(255, 255, 0);
+    }
+```
 
+```cpp
+    for (int i = 0; i < 20; ++i) {
+        Particle* p = ParticleFactory::createParticle("sunshine");
+        particles.push_back(p);
+        addObserver(p);
+    }
+```
+![alt text](image-1.png)
+
+Y si comento el addObserver(p), las particulas "sunshine" no seguiran las notificaciones del programa:
+
+![alt text](image-2.png)
 
 - Adiciona un nuevo estado.
 
-
+R/
 
 - Modifica el comportamiento de las partículas.
 
-
+R/
 
 - Crea otros eventos para notificar a las partículas.
+
+R/
