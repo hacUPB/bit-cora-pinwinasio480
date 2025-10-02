@@ -137,7 +137,76 @@ Y si comento el addObserver(p), las particulas "sunshine" no seguiran las notifi
 
 - Adiciona un nuevo estado.
 
-R/
+```cpp
+class DeleteState : public State {
+public:
+    void update(Particle* particle) override;
+};
+```
+
+```cpp
+class Particle : public Observer {
+public:
+    Particle();
+    ~Particle();
+
+    void update();
+    void draw();
+    void onNotify(const std::string& event) override;
+    void setState(State* newState);
+
+    ofVec2f position;
+    ofVec2f velocity;
+    float size;
+    ofColor color;
+    bool toDelete = false;
+}
+```
+
+```cpp
+    else if (event == "delete") {
+        setState(new DeleteState());
+    }
+```
+
+```cpp
+
+void DeleteState::update(Particle* particle) {
+    particle->toDelete = true;
+}
+```
+
+```cpp
+void ofApp::update() {
+    for (Particle* p : particles) {
+        p->update();
+    }
+
+    // Eliminar partículas marcadas para eliminación
+    particles.erase(
+        std::remove_if(particles.begin(), particles.end(),
+            [](Particle* p) {
+                if (p->toDelete) {
+                    delete p;  // liberar memoria
+                    return true;
+                }
+                return false;
+            }),
+        particles.end());
+}
+```
+
+```cpp
+    else if (key == 'd') {
+        notify("delete");
+    }
+```
+
+![alt text](image-3.png)
+
+Comentando una de las particulas:
+
+![alt text](image-4.png)
 
 - Modifica el comportamiento de las partículas.
 
