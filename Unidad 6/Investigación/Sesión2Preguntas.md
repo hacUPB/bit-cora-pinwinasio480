@@ -201,7 +201,6 @@ void ofApp::update() {
         notify("delete");
     }
 ```
-
 ![alt text](image-3.png)
 
 Comentando una de las particulas:
