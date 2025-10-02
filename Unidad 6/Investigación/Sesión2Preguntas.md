@@ -121,6 +121,7 @@ void Particle::onNotify(const std::string& event) {
         particle->color = ofColor(255, 255, 0);
     }
 ```
+![alt text](image-1.png)
 
 ```cpp
     for (int i = 0; i < 20; ++i) {
@@ -129,7 +130,6 @@ void Particle::onNotify(const std::string& event) {
         addObserver(p);
     }
 ```
-![alt text](image-1.png)
 
 Y si comento el addObserver(p), las particulas "sunshine" no seguiran las notificaciones del programa:
 
