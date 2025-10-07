@@ -211,6 +211,41 @@ Comentando una de las particulas:
 
 R/
 
+```cpp
+
+    ofColor randomColor = ofColor::fromHsb(ofRandom(255), 255, 255);
+    particle->color.lerp(randomColor, 0.05);
+
+```
+
+![alt text](image-5.png)
+
 - Crea otros eventos para notificar a las partículas.
 
 R/
+
+class BlinkState : public State {
+public:
+    void update(Particle* particle) override {
+        float t = fmod(ofGetElapsedTimef(), 1.0);
+        if (t < 0.5)
+            particle->color.a = 255; // visible
+        else
+            particle->color.a = 0; // invisible
+    }
+};
+
+Y en el onNotify de Particle:
+
+else if (event == "blink") {
+    setState(new BlinkState());
+}
+
+
+Y en el teclado:
+
+else if (key == 'b') {
+    notify("blink");
+}
+
+<video controls src="20251007-0249-54.4380593.mp4" title="Title"></video>
