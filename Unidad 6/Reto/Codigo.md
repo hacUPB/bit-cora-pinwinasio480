@@ -1,4 +1,5 @@
-ofApp.h
+### OFAPP.H:
+
 #pragma once
 
 #include "ofMain.h"
@@ -86,6 +87,11 @@ public:
     void update(Triangle* triangle) override;
 };
 
+class NormalState : public State {
+public:
+    void update(Triangle* triangle) override;
+};
+
 // -------------------------
 // Patrón Factory
 // -------------------------
@@ -109,7 +115,8 @@ private:
     std::vector<Triangle*> triangles;
 };
 
-ofApp.cpp
+### OFAPP.CPP:
+
 #include "ofApp.h"
 #include <algorithm> // para std::remove
 #include <cmath>     // para sinf si hace falta
@@ -138,7 +145,7 @@ Triangle::Triangle() {
     color1 = ofColor::fromHsb(ofRandom(255), 255, 255);
     color2 = ofColor::fromHsb(ofRandom(255), 255, 255);
     pulsePhase = ofRandom(0.0f, TWO_PI);
-    state = new PulseState();
+    state = new NormalState();
 }
 Triangle::~Triangle() {
     if (state) delete state;
@@ -181,7 +188,8 @@ void Triangle::draw() {
 }
 
 void Triangle::onNotify(const std::string& event) {
-    if (event == "pulse") setState(new PulseState());
+    if (event == "normal") setState(new NormalState());
+    else if (event == "pulse") setState(new PulseState());
     else if (event == "small") setState(new SmallState());
     else if (event == "big") setState(new BigState());
     else if (event == "rotate") setState(new RotateState());
@@ -209,6 +217,11 @@ void BigState::update(Triangle* triangle) {
     triangle->size = ofLerp(triangle->size, target, 0.08f);
 }
 
+void NormalState::update(Triangle* triangle) {
+    float target = triangle->baseSize * 1.0f;
+    triangle->size = ofLerp(triangle->size, target, 0.10f);
+}
+
 void RotateState::update(Triangle* triangle) {
     triangle->rotation += 2.0f;
     if (triangle->rotation > 360) triangle->rotation -= 360;
@@ -222,10 +235,12 @@ Triangle* TriangleFactory::createTriangle(const std::string& type) {
     if (type == "rainbow") {
         t->color1 = ofColor::fromHsb(ofRandom(255), 255, 255);
         t->color2 = ofColor::fromHsb(ofRandom(255), 255, 255);
-    } else if (type == "blue") {
+    }
+    else if (type == "blue") {
         t->color1 = ofColor(0, 0, 255);
         t->color2 = ofColor(0, 200, 255);
-    } else if (type == "fire") {
+    }
+    else if (type == "fire") {
         t->color1 = ofColor(255, 100, 0);
         t->color2 = ofColor(255, 200, 0);
     }
@@ -240,7 +255,7 @@ void ofApp::setup() {
     ofSetFrameRate(60);
 
     // Empieza con pocos triángulos para pruebas; sube el número después
-    for (int i = 0; i < 6; i++) {
+    for (int i = 0; i < 20; i++) {
         std::string type;
         if (i % 3 == 0) type = "rainbow";
         else if (i % 3 == 1) type = "blue";
@@ -264,15 +279,17 @@ void ofApp::draw() {
     }
 
     ofSetColor(255);
-    ofDrawBitmapString("Teclas: P = Pulse | B = Big | S = Small | R = Rotate", 10, 20);
+    ofDrawBitmapString("Teclas: P = Pulse | B = Big | S = Small | R = Rotate | N = Normal", 10, 20);
     ofDrawBitmapString("Triángulos: " + ofToString(triangles.size()) + "  FPS: " + ofToString(ofGetFrameRate(), 2), 10, 40);
 }
 
 void ofApp::keyPressed(int key) {
-    if (key == 'p') notify("pulse");
+    if (key == 'n') notify("normal");
+    else if (key == 'p') notify("pulse");
     else if (key == 'b') notify("big");
     else if (key == 's') notify("small");
     else if (key == 'r') notify("rotate");
+    else if (key == 'n') notify("normal");
 }
 
 void ofApp::exit() {
