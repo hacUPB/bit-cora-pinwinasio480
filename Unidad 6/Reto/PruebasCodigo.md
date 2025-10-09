@@ -8,7 +8,7 @@ S = Achicar/Small
 N = Normal
 P = Pulso/Pulse
 
-<video controls src="20251009-0248-35.3139434.mp4" title="Title"></video>
+https://upbeduco-my.sharepoint.com/:v:/g/personal/samuel_gomeze_upb_edu_co/ESe7agkdCiRAtjKHsc6JabsBshfRBnwfjNX8jjnAPBEgGg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=yvi1yU
 
 1.2 Agregar un log para verificar que si se este cumpliendo los eventos.
 
