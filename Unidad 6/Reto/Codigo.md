@@ -11,19 +11,19 @@
 // -------------------------
 class Observer {
 public:
-	virtual void onNotify(const std::string & event) = 0;
+	virtual void onNotify(const std::string& event) = 0;
 };
 
 class Subject {
 public:
-	void addObserver(Observer * observer);
-	void removeObserver(Observer * observer);
+	void addObserver(Observer* observer);
+	void removeObserver(Observer* observer);
 
 protected:
-	void notify(const std::string & event);
+	void notify(const std::string& event);
 
 private:
-	std::vector<Observer *> observers;
+	std::vector<Observer*> observers;
 };
 
 // -------------------------
@@ -33,9 +33,9 @@ class Triangle; // forward declaration
 
 class State {
 public:
-	virtual void update(Triangle * triangle) = 0;
-	virtual void onEnter(Triangle * triangle) { }
-	virtual void onExit(Triangle * triangle) { }
+	virtual void update(Triangle* triangle) = 0;
+	virtual void onEnter(Triangle* triangle) {}
+	virtual void onExit(Triangle* triangle) {}
 	virtual ~State() = default;
 };
 
@@ -49,8 +49,8 @@ public:
 
 	void update();
 	void draw();
-	void onNotify(const std::string & event) override;
-	void setState(State * newState);
+	void onNotify(const std::string& event) override;
+	void setState(State* newState);
 
 	ofVec2f position;
 	float size; // tamaño actual (visual)
@@ -62,7 +62,7 @@ public:
 	float pulsePhase = 0.0f;
 
 private:
-	State * state;
+	State* state;
 };
 
 // -------------------------
@@ -70,28 +70,28 @@ private:
 // -------------------------
 class PulseState : public State {
 public:
-	void onEnter(Triangle * triangle) override;
-	void update(Triangle * triangle) override;
+	void onEnter(Triangle* triangle) override;
+	void update(Triangle* triangle) override;
 };
 
 class SmallState : public State {
 public:
-	void update(Triangle * triangle) override;
+	void update(Triangle* triangle) override;
 };
 
 class BigState : public State {
 public:
-	void update(Triangle * triangle) override;
+	void update(Triangle* triangle) override;
 };
 
 class RotateState : public State {
 public:
-	void update(Triangle * triangle) override;
+	void update(Triangle* triangle) override;
 };
 
 class NormalState : public State {
 public:
-	void update(Triangle * triangle) override;
+	void update(Triangle* triangle) override;
 };
 
 // -------------------------
@@ -99,7 +99,7 @@ public:
 // -------------------------
 class TriangleFactory {
 public:
-	static Triangle * createTriangle(const std::string & type);
+	static Triangle* createTriangle(const std::string& type);
 };
 
 // -------------------------
@@ -114,7 +114,7 @@ public:
 	void exit(); // limpieza final
 
 private:
-	std::vector<Triangle *> triangles;
+	std::vector<Triangle*> triangles;
 };
 
 
@@ -127,14 +127,14 @@ private:
 // -------------------------
 // Subject (Observer pattern)
 // -------------------------
-void Subject::addObserver(Observer * observer) {
+void Subject::addObserver(Observer* observer) {
 	observers.push_back(observer);
 }
-void Subject::removeObserver(Observer * observer) {
+void Subject::removeObserver(Observer* observer) {
 	observers.erase(std::remove(observers.begin(), observers.end(), observer), observers.end());
 }
-void Subject::notify(const std::string & event) {
-	for (Observer * o : observers)
+void Subject::notify(const std::string& event) {
+	for (Observer* o : observers)
 		if (o) o->onNotify(event);
 }
 
@@ -155,7 +155,7 @@ Triangle::~Triangle() {
 	if (state) delete state;
 }
 
-void Triangle::setState(State * newState) {
+void Triangle::setState(State* newState) {
 	if (state != nullptr) {
 		state->onExit(this);
 		delete state;
@@ -191,7 +191,8 @@ void Triangle::draw() {
 	ofPopMatrix();
 }
 
-void Triangle::onNotify(const std::string & event) {
+void Triangle::onNotify(const std::string& event) {
+	ofLogNotice() << "Triangle recibió evento: " << event;
 	if (event == "normal")
 		setState(new NormalState());
 	else if (event == "pulse")
@@ -207,31 +208,31 @@ void Triangle::onNotify(const std::string & event) {
 // -------------------------
 // Estados
 // -------------------------
-void PulseState::onEnter(Triangle * triangle) {
+void PulseState::onEnter(Triangle* triangle) {
 	triangle->pulsePhase = 0.0f; // reiniciamos la fase al entrar
 }
-void PulseState::update(Triangle * triangle) {
+void PulseState::update(Triangle* triangle) {
 	triangle->pulsePhase += 0.2f;
 	float pulse = sinf(triangle->pulsePhase) * 0.5f + 1.0f; // entre 0.5 y 1.5
 	triangle->size = ofClamp(triangle->baseSize * pulse, 10.0f, 200.0f);
 }
 
-void SmallState::update(Triangle * triangle) {
+void SmallState::update(Triangle* triangle) {
 	float target = triangle->baseSize * 0.5f;
 	triangle->size = ofLerp(triangle->size, target, 0.12f);
 }
 
-void BigState::update(Triangle * triangle) {
+void BigState::update(Triangle* triangle) {
 	float target = triangle->baseSize * 1.8f;
 	triangle->size = ofLerp(triangle->size, target, 0.08f);
 }
 
-void NormalState::update(Triangle * triangle) {
+void NormalState::update(Triangle* triangle) {
 	float target = triangle->baseSize * 1.0f;
 	triangle->size = ofLerp(triangle->size, target, 0.10f);
 }
 
-void RotateState::update(Triangle * triangle) {
+void RotateState::update(Triangle* triangle) {
 	triangle->rotation += 2.0f;
 	if (triangle->rotation > 360) triangle->rotation -= 360;
 }
@@ -239,15 +240,17 @@ void RotateState::update(Triangle * triangle) {
 // -------------------------
 // Factory
 // -------------------------
-Triangle * TriangleFactory::createTriangle(const std::string & type) {
-	Triangle * t = new Triangle();
+Triangle* TriangleFactory::createTriangle(const std::string& type) {
+	Triangle* t = new Triangle();
 	if (type == "rainbow") {
 		t->color1 = ofColor::fromHsb(ofRandom(255), 255, 255);
 		t->color2 = ofColor::fromHsb(ofRandom(255), 255, 255);
-	} else if (type == "blue") {
+	}
+	else if (type == "blue") {
 		t->color1 = ofColor(0, 0, 255);
 		t->color2 = ofColor(0, 200, 255);
-	} else if (type == "fire") {
+	}
+	else if (type == "fire") {
 		t->color1 = ofColor(255, 100, 0);
 		t->color2 = ofColor(255, 200, 0);
 	}
@@ -271,20 +274,20 @@ void ofApp::setup() {
 		else
 			type = "fire";
 
-		Triangle * t = TriangleFactory::createTriangle(type);
+		Triangle* t = TriangleFactory::createTriangle(type);
 		triangles.push_back(t);
 		addObserver(t);
 	}
 }
 
 void ofApp::update() {
-	for (Triangle * t : triangles) {
+	for (Triangle* t : triangles) {
 		if (t) t->update();
 	}
 }
 
 void ofApp::draw() {
-	for (Triangle * t : triangles) {
+	for (Triangle* t : triangles) {
 		if (t) t->draw();
 	}
 
@@ -309,7 +312,7 @@ void ofApp::keyPressed(int key) {
 }
 
 void ofApp::exit() {
-	for (Triangle * t : triangles) {
+	for (Triangle* t : triangles) {
 		delete t;
 	}
 	triangles.clear();
