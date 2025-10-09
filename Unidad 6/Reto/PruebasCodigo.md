@@ -8,7 +8,7 @@ S = Achicar/Small
 N = Normal
 P = Pulso/Pulse
 
-[Prueba1Reto](https://upbeduco-my.sharepoint.com/:v:/g/personal/samuel_gomeze_upb_edu_co/ESe7agkdCiRAtjKHsc6JabsBshfRBnwfjNX8jjnAPBEgGg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=yvi1yU)
+[Prueba1RetoEnlaceAOneDrive](https://upbeduco-my.sharepoint.com/:v:/g/personal/samuel_gomeze_upb_edu_co/ESe7agkdCiRAtjKHsc6JabsBshfRBnwfjNX8jjnAPBEgGg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=yvi1yU)
 
 1.2 Agregar un log para verificar que si se este cumpliendo los eventos.
 
@@ -30,4 +30,4 @@ void Triangle::onNotify(const std::string & event) {
 
 ![alt text](image.png)
 
-<video controls src="20251009-0257-12.4464699.mp4" title="Title"></video>
+[Prueba2RetoEnlaceAOneDrive](https://upbeduco-my.sharepoint.com/:v:/g/personal/samuel_gomeze_upb_edu_co/EW5E0Y9QlVtGgJ9CSO0eV9IBBO8qTuPJ_WMa4DaTZzG8yg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=2hl7F4)
