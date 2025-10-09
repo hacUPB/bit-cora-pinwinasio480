@@ -31,3 +31,17 @@ void Triangle::onNotify(const std::string & event) {
 ![alt text](image.png)
 
 [Prueba2RetoEnlaceAOneDrive](https://upbeduco-my.sharepoint.com/:v:/g/personal/samuel_gomeze_upb_edu_co/EW5E0Y9QlVtGgJ9CSO0eV9IBBO8qTuPJ_WMa4DaTZzG8yg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=2hl7F4)
+
+## Pruebas cuantitativas
+
+2.1 Como influyen los fps con la cantidad de triangulos en pantalla.
+
+| Cantidad de Triangulos en Pantalla | FPS |
+| --- | --- |
+| 20 | 59-60 FPS |
+| 80 | 56-57 FPS Iniciales, 58-69 FPS posteriormente|
+| 250 | 55 - 59 FPS |
+| 850 | FPS inestables entre 41 - 60 dependiendo del evento |
+| 2000 | Puede llegar a bajar hasta 32 FPS, con subidas algo agresivas de hasta 40 o 50 FPS |
+
+[PruebaFPSRetoEnlaceAOneDrive](https://upbeduco-my.sharepoint.com/:v:/g/personal/samuel_gomeze_upb_edu_co/EVqndZfgEElGmdJqzpIyO9kBOtIp6a3FIOHaZ8CZJTAa6A?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=dgDigt)
