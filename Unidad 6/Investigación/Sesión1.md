@@ -8,21 +8,13 @@ A continuación, te presentaré los recursos teóricos para cada patrón. Estudi
 
 #### Patrones:
 
-- Cadenas de responsabilidad:
-- Comando: 
-- Itinerador: 
-- Mediador: 
+- Cadenas de responsabilidad: Permite pasar una solicitud a través de una cadena de manejadores hasta que uno de ellos la procese.
+- Comando: Convierte una petición en un objeto independiente que puede almacenarse, deshacerse o ejecutarse más tarde.
+- Itinerador: Permite recorrer elementos de una colección sin exponer su estructura interna.
+- Mediador: Centraliza la comunicación entre objetos para que no se comuniquen directamente entre sí.
 - Recuerdo: Guarda y restaura el estado anterior de un objeto sin revelación de detalles.
 - Observador: El ejemplo de las suscripciones, cuando estoy suscrito a algo, me notificara, de lo contrario, esto no pasara, como con los canales de YouTube,
 - Estado: Altera el comportamiento de un objeto si se cambia su estado interno.
 - Estrategia: Definir una familia de algoritmos con clases diferentes pero con objetos intercambiables.
 - Método de plantilla: Define el patrón de un algortimo en una superclase, pero se puede anular pasos en las subclases sin alterar la estructura.
 - Visitante: Separa algortimos de los objetos que operan.
-
-#### Preguntas y respuestas hacia ChatGPT
-
-#### Patrones de observación
-
-Ejemplos de suscripción
-
-las notificaciones llegan desde update con el metodo notify, haciendo un buncle con foreach
