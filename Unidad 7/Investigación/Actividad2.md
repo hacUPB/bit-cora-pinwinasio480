@@ -1,5 +1,7 @@
 ### Actividad 2
 
+#### Introducing
+
 Comienza realizando la lectura de la introducción del tutorial [Introducing Shaders](https://openframeworks.cc/ofBook/chapters/shaders.html). Realiza la sección Your First Shader, pero antes de ejecutar el código, realiza un pequeño experimento. Modifica ligeramente el método draw:
 
 ```cpp
