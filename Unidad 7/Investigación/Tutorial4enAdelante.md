@@ -67,7 +67,11 @@ https://upbeduco-my.sharepoint.com/:v:/g/personal/samuel_gomeze_upb_edu_co/ES67y
 
 Original:
 
+![alt text](image-14.png)
+
 Modificada:
+
+![alt text](image-15.png)
 
 #### Textures as Data (e.g. Displacement)
 
