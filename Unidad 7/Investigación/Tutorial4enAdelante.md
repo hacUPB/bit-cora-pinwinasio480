@@ -87,6 +87,8 @@ Modificada:
 
 Original:
 
+![alt text](image-18.png)
+
 Modificada:
 
-#### The End, Congrats!
+![alt text](image-19.png)
