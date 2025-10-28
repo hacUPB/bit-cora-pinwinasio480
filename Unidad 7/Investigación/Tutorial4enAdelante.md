@@ -77,7 +77,11 @@ Modificada:
 
 Original:
 
+![alt text](image-16.png)
+
 Modificada:
+
+![alt text](image-17.png)
 
 #### Blurring
 
