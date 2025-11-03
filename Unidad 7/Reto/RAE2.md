@@ -77,3 +77,5 @@ void main()
 - Explica y muestra cómo probaste toda la aplicación completa.
 
 Ya con todos los códigos integrados, fue cuestión de depurar el programa y ver que tal aparecia, asi mismo, hice todas las modificaciones en conjunto como mencione anteriormente.
+
+![alt text](image-3.png)

@@ -68,3 +68,7 @@ La GPU usa su propia copia de los datos (textura) para renderizarla en pantalla,
 ### Captura del programa
 
 ![alt text](image.png)
+
+### Enlace a video reto
+
+https://upbeduco-my.sharepoint.com/:v:/g/personal/samuel_gomeze_upb_edu_co/EbfDVoCixDtKingXGclC4XEBF3eLMByKmxB63cwozw0kEg
