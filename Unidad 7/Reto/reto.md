@@ -1,4 +1,4 @@
-### Idea del reto
+### Explicación reto
 
 Versión del ejemplo 8, solo que en lugar de las ondas elevarse de forma vertical al igual que el plano, este se hace de forma horizontal. (las configuraciones de X y Y se invierten). Asi mismo, el plano tiene dos colores: Indian Red y Blue Steel. Al igual que en las unidades pasadas en donde hicimos un objeto 3D en donde dependiendo de la posición de la onda, el color cambia, mientras más alto es rojo, y más bajo es azul.
 
